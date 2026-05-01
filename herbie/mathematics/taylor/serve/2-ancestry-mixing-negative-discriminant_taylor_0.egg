@@ -1,0 +1,12 @@
+(multi-extract
+ 1
+ (const8)
+ (const10)
+ (const15)
+ (const20)
+ (const24)
+ (const30)
+ (const39)
+ (const43)
+ (const47)
+ (const49))
