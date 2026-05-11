@@ -1,0 +1,15 @@
+(multi-extract
+ 1000000
+ (const4)
+ (const7)
+ (const5)
+ (const6)
+ (const8)
+ (const9)
+ (const10)
+ (const11)
+ (const12)
+ (const16)
+ (const17)
+ (const19)
+ (const20))

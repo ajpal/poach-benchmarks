@@ -1,0 +1,5309 @@
+(datatype
+ M
+ (Num BigRat :cost 4294967295)
+ (Var String :cost 4294967295)
+ (Sound-/ M M M :cost 4294967295)
+ (Sound-Log M M :cost 4294967295)
+ (Sound-Pow M M M :cost 4294967295)
+ (Array M M :cost 4294967295)
+ (Array3 M M M :cost 4294967295)
+ (Neq M M :cost 4294967295)
+ (Mul M M :cost 4294967295)
+ (Add M M :cost 4294967295)
+ (Sub M M :cost 4294967295)
+ (Div M M :cost 4294967295)
+ (Lt M M :cost 4294967295)
+ (Lte M M :cost 4294967295)
+ (Eq M M :cost 4294967295)
+ (Gt M M :cost 4294967295)
+ (Gte M M :cost 4294967295)
+ (E :cost 4294967295)
+ (False :cost 4294967295)
+ (Infinity :cost 4294967295)
+ (Nan :cost 4294967295)
+ (Pi :cost 4294967295)
+ (True :cost 4294967295)
+ (Acos M :cost 4294967295)
+ (Acosh M :cost 4294967295)
+ (And M M :cost 4294967295)
+ (Asin M :cost 4294967295)
+ (Asinh M :cost 4294967295)
+ (Assert M :cost 4294967295)
+ (Atan M :cost 4294967295)
+ (Atan2 M M :cost 4294967295)
+ (Atanh M :cost 4294967295)
+ (Cast M :cost 4294967295)
+ (Cbrt M :cost 4294967295)
+ (Ceil M :cost 4294967295)
+ (Copysign M M :cost 4294967295)
+ (Cos M :cost 4294967295)
+ (Cosh M :cost 4294967295)
+ (Erf M :cost 4294967295)
+ (Erfc M :cost 4294967295)
+ (Error M :cost 4294967295)
+ (Exp M :cost 4294967295)
+ (Exp2 M :cost 4294967295)
+ (Expm1 M :cost 4294967295)
+ (Fabs M :cost 4294967295)
+ (Fdim M M :cost 4294967295)
+ (Floor M :cost 4294967295)
+ (Fma M M M :cost 4294967295)
+ (Fmax M M :cost 4294967295)
+ (Fmin M M :cost 4294967295)
+ (Fmod M M :cost 4294967295)
+ (Hypot M M :cost 4294967295)
+ (If M M M :cost 4294967295)
+ (Lgamma M :cost 4294967295)
+ (Log M :cost 4294967295)
+ (Log10 M :cost 4294967295)
+ (Log1p M :cost 4294967295)
+ (Log2 M :cost 4294967295)
+ (Logb M :cost 4294967295)
+ (Neg M :cost 4294967295)
+ (Not M :cost 4294967295)
+ (Or M M :cost 4294967295)
+ (Pow M M :cost 4294967295)
+ (Pow2 M :cost 4294967295)
+ (Ref M M :cost 4294967295)
+ (Remainder M M :cost 4294967295)
+ (Rint M :cost 4294967295)
+ (Round M :cost 4294967295)
+ (Sin M :cost 4294967295)
+ (Sinh M :cost 4294967295)
+ (Sqrt M :cost 4294967295)
+ (Tan M :cost 4294967295)
+ (Tanh M :cost 4294967295)
+ (Tgamma M :cost 4294967295)
+ (Then M :cost 4294967295)
+ (Trunc M :cost 4294967295))
+(datatype
+ MTy
+ (Num_arr_3_sym_binary32 BigRat :cost 375)
+ (Num_arr_2_sym_binary32 BigRat :cost 250)
+ (Num_arr_2_arr_2_sym_binary64 BigRat :cost 250)
+ (Num_arr_3_sym_binary64 BigRat :cost 375)
+ (Num_arr_2_sym_binary64 BigRat :cost 250)
+ (Num_sym_binary64 BigRat :cost 125)
+ (Num_sym_binary32 BigRat :cost 125)
+ (Var_arr_3_sym_binary32 String :cost 0)
+ (Var_arr_2_sym_binary32 String :cost 0)
+ (Var_arr_2_arr_2_sym_binary64 String :cost 0)
+ (Var_sym_bool String :cost 0)
+ (Var_arr_3_sym_binary64 String :cost 0)
+ (Var_arr_2_sym_binary64 String :cost 0)
+ (Var_sym_binary64 String :cost 0)
+ (Var_sym_binary32 String :cost 0)
+ (Approx M MTy)
+ (Atan2f32Ty MTy MTy :cost 2000)
+ (Ef32Ty :cost 125)
+ (Mulf32Ty MTy MTy :cost 250)
+ (Cbrtf64Ty MTy :cost 2000)
+ (Sinhf32Ty MTy :cost 1750)
+ (NotTy MTy :cost 100)
+ (Log10f32Ty MTy :cost 1175)
+ (Asinf32Ty MTy :cost 500)
+ (Ltf32Ty MTy MTy :cost 125)
+ (Sqrtf64Ty MTy :cost 250)
+ (Fdimf64Ty MTy MTy :cost 750)
+ (Lgammaf64Ty MTy :cost 2250)
+ (Negf32Ty MTy :cost 125)
+ (Log1pf64Ty MTy :cost 1300)
+ (Fminf32Ty MTy MTy :cost 250)
+ (Rintf64Ty MTy :cost 300)
+ (Subf32Ty MTy MTy :cost 200)
+ (Array2f64Ty MTy MTy :cost 250)
+ (Array3f64Ty MTy MTy MTy :cost 375)
+ (Cbrtf32Ty MTy :cost 2000)
+ (Fmaxf64Ty MTy MTy :cost 250)
+ (Fmodf64Ty MTy MTy :cost 1750)
+ (Infinityf32Ty :cost 125)
+ (Log10f64Ty MTy :cost 1175)
+ (Cosf64Ty MTy :cost 4200)
+ (Fmaxf32Ty MTy MTy :cost 250)
+ (Sinhf64Ty MTy :cost 1750)
+ (Truncf32Ty MTy :cost 275)
+ (Tanhf64Ty MTy :cost 1000)
+ (Subf64Ty MTy MTy :cost 200)
+ (Fabsf64Ty MTy :cost 125)
+ (Sinf64Ty MTy :cost 4200)
+ (Tanf32Ty MTy :cost 4750)
+ (Ceilf64Ty MTy :cost 250)
+ (Powf32Ty MTy MTy :cost 2000)
+ (Neqf32Ty MTy MTy :cost 125)
+ (Fabsf32Ty MTy :cost 125)
+ (Erfcf64Ty MTy :cost 900)
+ (Atanf32Ty MTy :cost 1100)
+ (Array3f32Ty MTy MTy MTy :cost 375)
+ (Fmodf32Ty MTy MTy :cost 1750)
+ (Exp2f64Ty MTy :cost 1175)
+ (Eqf64Ty MTy MTy :cost 125)
+ (Atanf64Ty MTy :cost 1100)
+ (Powf64Ty MTy MTy :cost 2000)
+ (Coshf32Ty MTy :cost 1250)
+ (Logbf64Ty MTy :cost 350)
+ (Acosf32Ty MTy :cost 500)
+ (Reff32Ty MTy MTy :cost 200)
+ (Expf64Ty MTy :cost 1375)
+ (Refr3f64Ty MTy MTy :cost 200)
+ (Roundf32Ty MTy :cost 875)
+ (Erfcf32Ty MTy :cost 900)
+ (Rintf32Ty MTy :cost 300)
+ (Arrayf32Ty MTy MTy :cost 250)
+ (Acosf64Ty MTy :cost 500)
+ (Asinf64Ty MTy :cost 500)
+ (Coshf64Ty MTy :cost 1650)
+ (Log2f64Ty MTy :cost 850)
+ (Remainderf64Ty MTy MTy :cost 1000)
+ (Tanhf32Ty MTy :cost 1000)
+ (Gtf64Ty MTy MTy :cost 125)
+ (Copysignf32Ty MTy MTy :cost 200)
+ (Erff64Ty MTy :cost 1125)
+ (Remainderf32Ty MTy MTy :cost 1000)
+ (Reff64Ty MTy MTy :cost 200)
+ (Neqf64Ty MTy MTy :cost 125)
+ (Truncf64Ty MTy :cost 250)
+ (Fdimf32Ty MTy MTy :cost 750)
+ (AndTy MTy MTy :cost 100)
+ (TrueTy :cost 100)
+ (Fmaf64Ty MTy MTy MTy :cost 375)
+ (FalseTy :cost 100)
+ (Hypotf32Ty MTy MTy :cost 1700)
+ (Erff32Ty MTy :cost 1125)
+ (Logf64Ty MTy :cost 750)
+ (Eqf32Ty MTy MTy :cost 125)
+ (Tanf64Ty MTy :cost 4650)
+ (Logf32Ty MTy :cost 750)
+ (Expm1f32Ty MTy :cost 900)
+ (Exp2f32Ty MTy :cost 1175)
+ (Atanhf64Ty MTy :cost 450)
+ (Arrayf64Ty MTy MTy :cost 250)
+ (Nanf64Ty :cost 125)
+ (Fminf64Ty MTy MTy :cost 250)
+ (Expf32Ty MTy :cost 1375)
+ (Log2f32Ty MTy :cost 875)
+ (Lgammaf32Ty MTy :cost 2250)
+ (Ltef64Ty MTy MTy :cost 125)
+ (Fmaf32Ty MTy MTy MTy :cost 375)
+ (OrTy MTy MTy :cost 100)
+ (Addf64Ty MTy MTy :cost 200)
+ (Iff64Ty MTy MTy MTy :cost 0)
+ (Tgammaf64Ty MTy :cost 2625)
+ (Sqrtf32Ty MTy :cost 250)
+ (Nanf32Ty :cost 125)
+ (Pif32Ty :cost 125)
+ (Logbf32Ty MTy :cost 375)
+ (Gtef32Ty MTy MTy :cost 125)
+ (Refr3f32Ty MTy MTy :cost 200)
+ (Gtf32Ty MTy MTy :cost 125)
+ (Divf32Ty MTy MTy :cost 350)
+ (Acoshf64Ty MTy :cost 850)
+ (Roundf64Ty MTy :cost 850)
+ (Atan2f64Ty MTy MTy :cost 2000)
+ (Floorf64Ty MTy :cost 300)
+ (Hypotf64Ty MTy MTy :cost 1700)
+ (Asinhf32Ty MTy :cost 1125)
+ (Negf64Ty MTy :cost 125)
+ (Refr2f64Ty MTy MTy :cost 200)
+ (Ceilf32Ty MTy :cost 250)
+ (Ef64Ty :cost 125)
+ (Gtef64Ty MTy MTy :cost 125)
+ (Iff32Ty MTy MTy MTy :cost 0)
+ (Mulf64Ty MTy MTy :cost 250)
+ (Floorf32Ty MTy :cost 250)
+ (Ltef32Ty MTy MTy :cost 125)
+ (Divf64Ty MTy MTy :cost 350)
+ (Tgammaf32Ty MTy :cost 2625)
+ (Log1pf32Ty MTy :cost 1300)
+ (Expm1f64Ty MTy :cost 900)
+ (Acoshf32Ty MTy :cost 850)
+ (Ltf64Ty MTy MTy :cost 125)
+ (Atanhf32Ty MTy :cost 500)
+ (Copysignf64Ty MTy MTy :cost 200)
+ (Asinhf64Ty MTy :cost 1125)
+ (Addf32Ty MTy MTy :cost 200)
+ (Sinf32Ty MTy :cost 4250)
+ (Pif64Ty :cost 125)
+ (Cosf32Ty MTy :cost 4250)
+ (InfinityTy :cost 125))
+(constructor do-lower (M String) MTy :unextractable)
+(constructor do-lift (MTy) M :unextractable)
+(ruleset lower)
+(ruleset lift)
+(ruleset unsound)
+(function bad-merge? () bool :merge (or old new))
+(ruleset bad-merge-rule)
+(set (bad-merge?) false)
+(rule
+ ((= (Num c1) (Num c2)) (!= c1 c2))
+ ((set (bad-merge?) true))
+ :ruleset
+ bad-merge-rule)
+(rule
+ ((= e (Var "Xr")))
+ ((union (do-lower e "sym_binary64") (Var_sym_binary64 "Xr")))
+ :ruleset
+ lower)
+(rule
+ ((= e (Var "Yr")))
+ ((union (do-lower e "sym_binary64") (Var_sym_binary64 "Yr")))
+ :ruleset
+ lower)
+(rule
+ ((= e (Var_sym_binary64 "Xr")))
+ ((union (do-lift e) (Var "Xr")))
+ :ruleset
+ lift)
+(rule
+ ((= e (Var_sym_binary64 "Yr")))
+ ((union (do-lift e) (Var "Yr")))
+ :ruleset
+ lift)
+(constructor const1 () M :unextractable)
+(constructor const2 () M :unextractable)
+(constructor const3 () MTy :unextractable)
+(constructor const4 () MTy :unextractable)
+(constructor const5 () MTy :unextractable)
+(constructor const6 () MTy :unextractable)
+(constructor const7 () MTy :unextractable)
+(constructor const8 () MTy :unextractable)
+(constructor const9 () MTy :unextractable)
+(constructor const10 () MTy :unextractable)
+(constructor const11 () MTy :unextractable)
+(constructor const12 () MTy :unextractable)
+(constructor const13 () MTy :unextractable)
+(constructor const14 () MTy :unextractable)
+(constructor const15 () MTy :unextractable)
+(constructor const16 () MTy :unextractable)
+(constructor const17 () MTy :unextractable)
+(constructor const18 () MTy :unextractable)
+(constructor const19 () MTy :unextractable)
+(constructor const20 () MTy :unextractable)
+(constructor const21 () MTy :unextractable)
+(constructor const22 () MTy :unextractable)
+(constructor const23 () MTy :unextractable)
+(constructor const24 () MTy :unextractable)
+(constructor const25 () MTy :unextractable)
+(constructor const26 () MTy :unextractable)
+(constructor const27 () MTy :unextractable)
+(constructor const28 () MTy :unextractable)
+(constructor const29 () MTy :unextractable)
+(constructor const30 () MTy :unextractable)
+(constructor const31 () MTy :unextractable)
+(constructor const32 () MTy :unextractable)
+(constructor const33 () MTy :unextractable)
+(constructor const34 () MTy :unextractable)
+(constructor const35 () MTy :unextractable)
+(constructor const36 () MTy :unextractable)
+(constructor const37 () MTy :unextractable)
+(constructor const38 () MTy :unextractable)
+(constructor const39 () MTy :unextractable)
+(constructor const40 () MTy :unextractable)
+(constructor const41 () MTy :unextractable)
+(constructor const42 () MTy :unextractable)
+(constructor const43 () MTy :unextractable)
+(constructor const44 () MTy :unextractable)
+(constructor const45 () MTy :unextractable)
+(constructor const46 () MTy :unextractable)
+(constructor const47 () MTy :unextractable)
+(constructor const48 () MTy :unextractable)
+(constructor const49 () MTy :unextractable)
+(constructor const50 () MTy :unextractable)
+(constructor const51 () MTy :unextractable)
+(constructor const52 () MTy :unextractable)
+(constructor const53 () MTy :unextractable)
+(constructor const54 () MTy :unextractable)
+(constructor const55 () MTy :unextractable)
+(constructor const56 () MTy :unextractable)
+(constructor const57 () MTy :unextractable)
+(constructor const58 () MTy :unextractable)
+(constructor const59 () MTy :unextractable)
+(constructor const60 () MTy :unextractable)
+(constructor const61 () MTy :unextractable)
+(constructor const62 () MTy :unextractable)
+(constructor const63 () MTy :unextractable)
+(constructor const64 () MTy :unextractable)
+(constructor const65 () MTy :unextractable)
+(constructor const66 () MTy :unextractable)
+(constructor const67 () MTy :unextractable)
+(constructor const68 () MTy :unextractable)
+(constructor const69 () MTy :unextractable)
+(constructor const70 () MTy :unextractable)
+(constructor const71 () MTy :unextractable)
+(constructor const72 () MTy :unextractable)
+(constructor const73 () MTy :unextractable)
+(constructor const74 () MTy :unextractable)
+(constructor const75 () MTy :unextractable)
+(constructor const76 () MTy :unextractable)
+(constructor const77 () MTy :unextractable)
+(constructor const78 () MTy :unextractable)
+(constructor const79 () MTy :unextractable)
+(constructor const80 () MTy :unextractable)
+(constructor const81 () MTy :unextractable)
+(constructor const82 () MTy :unextractable)
+(constructor const83 () MTy :unextractable)
+(constructor const84 () MTy :unextractable)
+(constructor const85 () MTy :unextractable)
+(constructor const86 () MTy :unextractable)
+(constructor const87 () MTy :unextractable)
+(constructor const88 () MTy :unextractable)
+(constructor const89 () MTy :unextractable)
+(constructor const90 () MTy :unextractable)
+(constructor const91 () MTy :unextractable)
+(constructor const92 () MTy :unextractable)
+(constructor const93 () MTy :unextractable)
+(constructor const94 () M :unextractable)
+(constructor const95 () M :unextractable)
+(constructor const96 () M :unextractable)
+(constructor const97 () M :unextractable)
+(constructor const98 () M :unextractable)
+(constructor const99 () M :unextractable)
+(constructor const100 () M :unextractable)
+(constructor const101 () M :unextractable)
+(constructor const102 () M :unextractable)
+(constructor const103 () MTy :unextractable)
+(constructor const104 () MTy :unextractable)
+(constructor const105 () MTy :unextractable)
+(constructor const106 () M :unextractable)
+(constructor const107 () M :unextractable)
+(constructor const108 () M :unextractable)
+(constructor const109 () M :unextractable)
+(constructor const110 () M :unextractable)
+(constructor const111 () M :unextractable)
+(constructor const112 () M :unextractable)
+(constructor const113 () M :unextractable)
+(constructor const114 () M :unextractable)
+(constructor const115 () M :unextractable)
+(constructor const116 () M :unextractable)
+(constructor const117 () M :unextractable)
+(constructor const118 () M :unextractable)
+(constructor const119 () M :unextractable)
+(constructor const120 () M :unextractable)
+(constructor const121 () M :unextractable)
+(constructor const122 () M :unextractable)
+(constructor const123 () M :unextractable)
+(constructor const124 () M :unextractable)
+(constructor const125 () M :unextractable)
+(constructor const126 () M :unextractable)
+(constructor const127 () M :unextractable)
+(constructor const128 () M :unextractable)
+(constructor const129 () M :unextractable)
+(constructor const130 () M :unextractable)
+(constructor const131 () M :unextractable)
+(constructor const132 () M :unextractable)
+(constructor const133 () M :unextractable)
+(constructor const134 () M :unextractable)
+(constructor const135 () M :unextractable)
+(constructor const136 () M :unextractable)
+(constructor const137 () M :unextractable)
+(constructor const138 () M :unextractable)
+(constructor const139 () M :unextractable)
+(constructor const140 () M :unextractable)
+(constructor const141 () M :unextractable)
+(constructor const142 () MTy :unextractable)
+(constructor const143 () M :unextractable)
+(constructor const144 () M :unextractable)
+(constructor const145 () M :unextractable)
+(constructor const146 () M :unextractable)
+(constructor const147 () M :unextractable)
+(constructor const148 () MTy :unextractable)
+(constructor const149 () MTy :unextractable)
+(constructor const150 () M :unextractable)
+(constructor const151 () M :unextractable)
+(constructor const152 () M :unextractable)
+(constructor const153 () M :unextractable)
+(constructor const154 () M :unextractable)
+(constructor const155 () M :unextractable)
+(constructor const156 () M :unextractable)
+(constructor const157 () M :unextractable)
+(constructor const158 () M :unextractable)
+(constructor const159 () M :unextractable)
+(constructor const160 () M :unextractable)
+(constructor const161 () MTy :unextractable)
+(constructor const162 () M :unextractable)
+(constructor const163 () M :unextractable)
+(constructor const164 () M :unextractable)
+(constructor const165 () M :unextractable)
+(constructor const166 () M :unextractable)
+(constructor const167 () M :unextractable)
+(constructor const168 () M :unextractable)
+(constructor const169 () M :unextractable)
+(constructor const170 () M :unextractable)
+(constructor const171 () M :unextractable)
+(constructor const172 () M :unextractable)
+(constructor const173 () M :unextractable)
+(constructor const174 () M :unextractable)
+(constructor const175 () M :unextractable)
+(constructor const176 () M :unextractable)
+(constructor const177 () M :unextractable)
+(constructor const178 () M :unextractable)
+(constructor const179 () M :unextractable)
+(constructor const180 () M :unextractable)
+(constructor const181 () M :unextractable)
+(constructor const182 () M :unextractable)
+(constructor const183 () M :unextractable)
+(constructor const184 () M :unextractable)
+(constructor const185 () M :unextractable)
+(constructor const186 () M :unextractable)
+(constructor const187 () M :unextractable)
+(constructor const188 () M :unextractable)
+(constructor const189 () M :unextractable)
+(constructor const190 () MTy :unextractable)
+(constructor const191 () MTy :unextractable)
+(constructor const192 () MTy :unextractable)
+(constructor const193 () MTy :unextractable)
+(constructor const194 () MTy :unextractable)
+(constructor const195 () MTy :unextractable)
+(constructor const196 () MTy :unextractable)
+(constructor const197 () MTy :unextractable)
+(constructor const198 () MTy :unextractable)
+(constructor const199 () MTy :unextractable)
+(constructor const200 () MTy :unextractable)
+(constructor const201 () M :unextractable)
+(constructor const202 () M :unextractable)
+(constructor const203 () M :unextractable)
+(constructor const204 () M :unextractable)
+(constructor const205 () M :unextractable)
+(constructor const206 () M :unextractable)
+(constructor const207 () M :unextractable)
+(constructor const208 () M :unextractable)
+(constructor const209 () M :unextractable)
+(constructor const210 () M :unextractable)
+(constructor const211 () M :unextractable)
+(constructor const212 () M :unextractable)
+(constructor const213 () M :unextractable)
+(constructor const214 () M :unextractable)
+(constructor const215 () M :unextractable)
+(constructor const216 () M :unextractable)
+(constructor const217 () M :unextractable)
+(constructor const218 () M :unextractable)
+(constructor const219 () M :unextractable)
+(constructor const220 () MTy :unextractable)
+(constructor const221 () M :unextractable)
+(constructor const222 () M :unextractable)
+(constructor const223 () M :unextractable)
+(constructor const224 () M :unextractable)
+(constructor const225 () M :unextractable)
+(constructor const226 () M :unextractable)
+(constructor const227 () M :unextractable)
+(constructor const228 () MTy :unextractable)
+(constructor const229 () MTy :unextractable)
+(constructor const230 () MTy :unextractable)
+(constructor const231 () M :unextractable)
+(constructor const232 () MTy :unextractable)
+(constructor const233 () MTy :unextractable)
+(constructor const234 () MTy :unextractable)
+(constructor const235 () M :unextractable)
+(constructor const236 () M :unextractable)
+(constructor const237 () M :unextractable)
+(constructor const238 () M :unextractable)
+(constructor const239 () M :unextractable)
+(constructor const240 () MTy :unextractable)
+(constructor const241 () MTy :unextractable)
+(constructor const242 () MTy :unextractable)
+(constructor const243 () MTy :unextractable)
+(constructor const244 () MTy :unextractable)
+(constructor const245 () MTy :unextractable)
+(constructor const246 () MTy :unextractable)
+(constructor const247 () MTy :unextractable)
+(constructor const248 () MTy :unextractable)
+(constructor const249 () MTy :unextractable)
+(constructor const250 () MTy :unextractable)
+(constructor const251 () MTy :unextractable)
+(constructor const252 () MTy :unextractable)
+(constructor const253 () MTy :unextractable)
+(constructor const254 () MTy :unextractable)
+(constructor const255 () MTy :unextractable)
+(constructor const256 () MTy :unextractable)
+(constructor const257 () MTy :unextractable)
+(constructor const258 () MTy :unextractable)
+(constructor const259 () MTy :unextractable)
+(constructor const260 () MTy :unextractable)
+(constructor const261 () MTy :unextractable)
+(constructor const262 () MTy :unextractable)
+(constructor const263 () MTy :unextractable)
+(constructor const264 () MTy :unextractable)
+(constructor const265 () MTy :unextractable)
+(constructor const266 () MTy :unextractable)
+(constructor const267 () MTy :unextractable)
+(constructor const268 () MTy :unextractable)
+(constructor const269 () MTy :unextractable)
+(constructor const270 () M :unextractable)
+(constructor const271 () M :unextractable)
+(constructor const272 () M :unextractable)
+(constructor const273 () M :unextractable)
+(constructor const274 () M :unextractable)
+(constructor const275 () M :unextractable)
+(constructor const276 () M :unextractable)
+(constructor const277 () M :unextractable)
+(constructor const278 () M :unextractable)
+(constructor const279 () M :unextractable)
+(constructor const280 () M :unextractable)
+(constructor const281 () M :unextractable)
+(constructor const282 () M :unextractable)
+(constructor const283 () M :unextractable)
+(constructor const284 () M :unextractable)
+(constructor const285 () M :unextractable)
+(constructor const286 () M :unextractable)
+(constructor const287 () M :unextractable)
+(constructor const288 () M :unextractable)
+(constructor const289 () M :unextractable)
+(constructor const290 () MTy :unextractable)
+(constructor const291 () MTy :unextractable)
+(constructor const292 () MTy :unextractable)
+(constructor const293 () MTy :unextractable)
+(constructor const294 () M :unextractable)
+(constructor const295 () MTy :unextractable)
+(constructor const296 () MTy :unextractable)
+(constructor const297 () MTy :unextractable)
+(constructor const298 () MTy :unextractable)
+(constructor const299 () MTy :unextractable)
+(constructor const300 () MTy :unextractable)
+(constructor const301 () MTy :unextractable)
+(constructor const302 () MTy :unextractable)
+(constructor const303 () MTy :unextractable)
+(constructor const304 () MTy :unextractable)
+(constructor const305 () MTy :unextractable)
+(constructor const306 () MTy :unextractable)
+(constructor const307 () MTy :unextractable)
+(constructor const308 () MTy :unextractable)
+(constructor const309 () MTy :unextractable)
+(constructor const310 () MTy :unextractable)
+(constructor const311 () MTy :unextractable)
+(constructor const312 () MTy :unextractable)
+(constructor const313 () MTy :unextractable)
+(constructor const314 () MTy :unextractable)
+(constructor const315 () MTy :unextractable)
+(constructor const316 () MTy :unextractable)
+(constructor const317 () MTy :unextractable)
+(constructor const318 () MTy :unextractable)
+(constructor const319 () MTy :unextractable)
+(constructor const320 () MTy :unextractable)
+(constructor const321 () MTy :unextractable)
+(constructor const322 () MTy :unextractable)
+(constructor const323 () MTy :unextractable)
+(constructor const324 () MTy :unextractable)
+(constructor const325 () MTy :unextractable)
+(constructor const326 () MTy :unextractable)
+(constructor const327 () M :unextractable)
+(constructor const328 () M :unextractable)
+(constructor const329 () M :unextractable)
+(constructor const330 () M :unextractable)
+(constructor const331 () M :unextractable)
+(constructor const332 () M :unextractable)
+(constructor const333 () M :unextractable)
+(constructor const334 () M :unextractable)
+(constructor const335 () M :unextractable)
+(constructor const336 () M :unextractable)
+(constructor const337 () M :unextractable)
+(constructor const338 () MTy :unextractable)
+(constructor const339 () MTy :unextractable)
+(constructor const340 () MTy :unextractable)
+(constructor const341 () MTy :unextractable)
+(constructor const342 () MTy :unextractable)
+(constructor const343 () MTy :unextractable)
+(constructor const344 () MTy :unextractable)
+(constructor const345 () MTy :unextractable)
+(constructor const346 () MTy :unextractable)
+(constructor const347 () MTy :unextractable)
+(constructor const348 () MTy :unextractable)
+(constructor const349 () MTy :unextractable)
+(constructor const350 () MTy :unextractable)
+(constructor const351 () MTy :unextractable)
+(constructor const352 () MTy :unextractable)
+(constructor const353 () MTy :unextractable)
+(constructor const354 () MTy :unextractable)
+(constructor const355 () MTy :unextractable)
+(constructor const356 () MTy :unextractable)
+(constructor const357 () MTy :unextractable)
+(constructor const358 () MTy :unextractable)
+(constructor const359 () MTy :unextractable)
+(constructor const360 () MTy :unextractable)
+(constructor const361 () MTy :unextractable)
+(constructor const362 () MTy :unextractable)
+(constructor const363 () MTy :unextractable)
+(constructor const364 () MTy :unextractable)
+(constructor const365 () MTy :unextractable)
+(constructor const366 () MTy :unextractable)
+(constructor const367 () MTy :unextractable)
+(constructor const368 () MTy :unextractable)
+(constructor const369 () MTy :unextractable)
+(constructor const370 () MTy :unextractable)
+(constructor const371 () MTy :unextractable)
+(constructor const372 () MTy :unextractable)
+(constructor const373 () MTy :unextractable)
+(constructor const374 () MTy :unextractable)
+(constructor const375 () MTy :unextractable)
+(constructor const376 () MTy :unextractable)
+(constructor const377 () MTy :unextractable)
+(constructor const378 () MTy :unextractable)
+(constructor const379 () MTy :unextractable)
+(constructor const380 () MTy :unextractable)
+(constructor const381 () MTy :unextractable)
+(constructor const382 () MTy :unextractable)
+(ruleset run-extract-commands)
+(rule
+ ()
+ ((let ?sXr (Var "Xr"))
+  (union (const1) ?sXr)
+  (let ?sYr (Var "Yr"))
+  (union (const2) ?sYr)
+  (let ?tXr (Var_sym_binary64 "Xr"))
+  (union (const3) ?tXr)
+  (let ?tYr (Var_sym_binary64 "Yr"))
+  (union (const4) ?tYr)
+  (let ?r0 (Num_sym_binary64
+            (bigrat (from-string "2946529277") (from-string "100000000000"))))
+  (union (const5) ?r0)
+  (let ?r1 (Num_sym_binary64
+            (bigrat
+             (from-string "149230739")
+             (from-string "1250000000000000"))))
+  (union (const6) ?r1)
+  (let ?r3 (Mulf64Ty ?r1 ?tXr))
+  (union (const7) ?r3)
+  (let ?r4 (Num_sym_binary64
+            (bigrat
+             (from-string "-4668270147")
+             (from-string "10000000000000000"))))
+  (union (const8) ?r4)
+  (let ?r5 (Negf64Ty ?r4))
+  (union (const9) ?r5)
+  (let ?r7 (Mulf64Ty ?r5 ?tYr))
+  (union (const10) ?r7)
+  (let ?r8 (Num_sym_binary64 (bigrat (from-string "-2") (from-string "1"))))
+  (union (const11) ?r8)
+  (let ?r9 (Num_sym_binary64
+            (bigrat
+             (from-string "304747143")
+             (from-string "200000000000000000000"))))
+  (union (const12) ?r9)
+  (let ?r10 (Mulf64Ty ?tXr ?tYr))
+  (union (const13) ?r10)
+  (let ?r11 (Mulf64Ty ?r9 ?r10))
+  (union (const14) ?r11)
+  (let ?r12 (Mulf64Ty ?r8 ?r11))
+  (union (const15) ?r12)
+  (let ?r13 (Num_sym_binary64
+             (bigrat
+              (from-string "4616990181")
+              (from-string "500000000000000000000"))))
+  (union (const16) ?r13)
+  (let ?r14 (Mulf64Ty ?tXr ?tXr))
+  (union (const17) ?r14)
+  (let ?r15 (Mulf64Ty ?tYr ?tYr))
+  (union (const18) ?r15)
+  (let ?r16 (Subf64Ty ?r14 ?r15))
+  (union (const19) ?r16)
+  (let ?r17 (Mulf64Ty ?r13 ?r16))
+  (union (const20) ?r17)
+  (let ?r18 (Num_sym_binary64
+             (bigrat
+              (from-string "212097503")
+              (from-string "125000000000000000000000000"))))
+  (union (const21) ?r18)
+  (let ?r19 (Num_sym_binary64 (bigrat (from-string "3") (from-string "1"))))
+  (union (const22) ?r19)
+  (let ?r20 (Num_sym_binary64
+             (bigrat
+              (from-string "881662847")
+              (from-string "200000000000000000000000000"))))
+  (union (const23) ?r20)
+  (let ?r21 (Num_sym_binary64 (bigrat (from-string "4") (from-string "1"))))
+  (union (const24) ?r21)
+  (let ?r22 (Num_sym_binary64
+             (bigrat
+              (from-string "-3689471323")
+              (from-string "1000000000000000000000000000000000"))))
+  (union (const25) ?r22)
+  (let ?r23 (Mulf64Ty ?r14 ?r14))
+  (union (const26) ?r23)
+  (let ?r24 (Num_sym_binary64 (bigrat (from-string "-6") (from-string "1"))))
+  (union (const27) ?r24)
+  (let ?r25 (Num_sym_binary64
+             (bigrat
+              (from-string "-304747143")
+              (from-string "100000000000000000000"))))
+  (union (const28) ?r25)
+  (let ?r26 (Num_sym_binary64 (bigrat (from-string "2") (from-string "1"))))
+  (union (const29) ?r26)
+  (let ?r27 (Powf64Ty ?tYr ?r26))
+  (union (const30) ?r27)
+  (let ?r28 (Num_sym_binary64
+             (bigrat
+              (from-string "-4616990181")
+              (from-string "500000000000000000000"))))
+  (union (const31) ?r28)
+  (let ?r29 (Num_sym_binary64 (bigrat (from-string "-3") (from-string "1"))))
+  (union (const32) ?r29)
+  (let ?r30 (Num_sym_binary64
+             (bigrat
+              (from-string "-636292509")
+              (from-string "125000000000000000000000000"))))
+  (union (const33) ?r30)
+  (let ?r31 (Powf64Ty ?tYr ?r19))
+  (union (const34) ?r31)
+  (let ?r32 (Num_sym_binary64
+             (bigrat
+              (from-string "4165541759")
+              (from-string "125000000000000000000000000000000"))))
+  (union (const35) ?r32)
+  (let ?r33 (Num_sym_binary64
+             (bigrat
+              (from-string "-4165541759")
+              (from-string "125000000000000000000000000000000"))))
+  (union (const36) ?r33)
+  (let ?r34 (Powf64Ty ?tXr ?r21))
+  (union (const37) ?r34)
+  (let ?r35 (Powf64Ty ?tYr ?r21))
+  (union (const38) ?r35)
+  (let ?r36 (Num_sym_binary64
+             (bigrat
+              (from-string "4668270147")
+              (from-string "10000000000000000"))))
+  (union (const39) ?r36)
+  (let ?r37 (Mulf64Ty ?r36 ?tYr))
+  (union (const40) ?r37)
+  (let ?r38 (Fmaf64Ty ?r20 ?r31 ?r37))
+  (union (const41) ?r38)
+  (let ?r39 (Num_sym_binary64 (bigrat (from-string "1") (from-string "1"))))
+  (union (const42) ?r39)
+  (let ?r40 (Powf64Ty ?tXr ?r19))
+  (union (const43) ?r40)
+  (let ?r41 (Mulf64Ty ?r22 ?r34))
+  (union (const44) ?r41)
+  (let ?r42 (Num_sym_binary64
+             (bigrat
+              (from-string "3689471323")
+              (from-string "1000000000000000000000000000000000"))))
+  (union (const45) ?r42)
+  (let ?r43 (Divf64Ty ?tYr ?tXr))
+  (union (const46) ?r43)
+  (let ?r44 (Divf64Ty ?tXr ?tYr))
+  (union (const47) ?r44)
+  (let ?r45 (Divf64Ty ?r39 ?tYr))
+  (union (const48) ?r45)
+  (let ?r46 (Mulf64Ty ?r20 ?r45))
+  (union (const49) ?r46)
+  (let ?r47 (Fmaf64Ty ?r32 ?r44 ?r46))
+  (union (const50) ?r47)
+  (let ?r48 (Subf64Ty ?r47 ?r42))
+  (union (const51) ?r48)
+  (let ?r49 (Mulf64Ty ?r35 ?r48))
+  (union (const52) ?r49)
+  (let ?r50 (Mulf64Ty ?tYr ?r4))
+  (union (const53) ?r50)
+  (let ?r51 (Powf64Ty ?tXr ?r8))
+  (union (const54) ?r51)
+  (let ?r52 (Subf64Ty ?tXr ?tYr))
+  (union (const55) ?r52)
+  (let ?r53 (Addf64Ty ?tXr ?tYr))
+  (union (const56) ?r53)
+  (let ?r54 (Mulf64Ty ?r52 ?r53))
+  (union (const57) ?r54)
+  (let ?r55 (Mulf64Ty ?r52 ?r13))
+  (union (const58) ?r55)
+  (let ?r56 (Mulf64Ty ?tXr ?r13))
+  (union (const59) ?r56)
+  (let ?r57 (Mulf64Ty ?r29 ?tYr))
+  (union (const60) ?r57)
+  (let ?r58 (Fmaf64Ty ?r57 ?tYr ?r14))
+  (union (const61) ?r58)
+  (let ?r59 (Mulf64Ty ?r29 ?tXr))
+  (union (const62) ?r59)
+  (let ?r60 (Mulf64Ty ?tXr ?r14))
+  (union (const63) ?r60)
+  (let ?r61 (Mulf64Ty ?tXr ?r18))
+  (union (const64) ?r61)
+  (let ?r62 (Mulf64Ty ?r18 ?r14))
+  (union (const65) ?r62)
+  (let ?r63 (Num_sym_binary64
+             (bigrat
+              (from-string "-881662847")
+              (from-string "200000000000000000000000000"))))
+  (union (const66) ?r63)
+  (let ?r64 (Fmaf64Ty ?r59 ?tXr ?r15))
+  (union (const67) ?r64)
+  (let ?r65 (Mulf64Ty ?tYr ?r15))
+  (union (const68) ?r65)
+  (let ?r66 (Mulf64Ty ?tYr ?r20))
+  (union (const69) ?r66)
+  (let ?r67 (Mulf64Ty ?r63 ?tYr))
+  (union (const70) ?r67)
+  (let ?r68 (Mulf64Ty ?r53 ?r10))
+  (union (const71) ?r68)
+  (let ?r69 (Mulf64Ty ?r52 ?r33))
+  (union (const72) ?r69)
+  (let ?r70 (Mulf64Ty ?r68 ?r69))
+  (union (const73) ?r70)
+  (let ?r71 (Mulf64Ty ?tXr ?r24))
+  (union (const74) ?r71)
+  (let ?r72 (Fmaf64Ty ?r71 ?tXr ?r15))
+  (union (const75) ?r72)
+  (let ?r73 (Mulf64Ty ?tYr ?r72))
+  (union (const76) ?r73)
+  (let ?r74 (Fmaf64Ty ?r72 ?r15 ?r23))
+  (union (const77) ?r74)
+  (let ?r75 (Mulf64Ty ?r22 ?r74))
+  (union (const78) ?r75)
+  (let ?r76 (Mulf64Ty ?r22 ?r15))
+  (union (const79) ?r76)
+  (let ?r77 (Mulf64Ty ?r76 ?r72))
+  (union (const80) ?r77)
+  (let ?r78 (Mulf64Ty ?r22 ?tYr))
+  (union (const81) ?r78)
+  (let ?r79 (Fmaf64Ty ?r66 ?r64 ?r70))
+  (union (const82) ?r79)
+  (let ?r80 (Fmaf64Ty ?r61 ?r58 ?r79))
+  (union (const83) ?r80)
+  (let ?r81 (Fmaf64Ty ?r13 ?r54 ?r80))
+  (union (const84) ?r81)
+  (let ?r82 (Fmaf64Ty ?r25 ?tXr ?r36))
+  (union (const85) ?r82)
+  (let ?r83 (Num_sym_binary64
+             (bigrat
+              (from-string "-149230739")
+              (from-string "1250000000000000"))))
+  (union (const86) ?r83)
+  (let ?r84 (Fmaf64Ty ?tXr ?r1 ?r0))
+  (union (const87) ?r84)
+  (let ?r85 (Fmaf64Ty ?r55 ?r53 ?r84))
+  (union (const88) ?r85)
+  (let ?r86 (Num_sym_binary64
+             (bigrat
+              (from-string "-2946529277")
+              (from-string "100000000000"))))
+  (union (const89) ?r86)
+  (let ?r87 (Addf64Ty ?r0 ?r37))
+  (union (const90) ?r87)
+  (let ?r88 (Mulf64Ty ?r22 ?tXr))
+  (union (const91) ?r88)
+  (let ?r89 (Addf64Ty ?r18 ?r88))
+  (union (const92) ?r89)
+  (let ?r90 (Mulf64Ty ?r40 ?r89))
+  (union (const93) ?r90)
+  (let ?b91 (Num
+             (bigrat
+              (from-string "-3689471323")
+              (from-string "1000000000000000000000000000000000"))))
+  (union (const94) ?b91)
+  (let ?b92 (Num (bigrat (from-string "4") (from-string "1"))))
+  (union (const95) ?b92)
+  (let ?b93 (Pow ?sXr ?b92))
+  (union (const96) ?b93)
+  (let ?b94 (Mul ?b91 ?b93))
+  (union (const97) ?b94)
+  (let ?b95 (Num
+             (bigrat
+              (from-string "212097503")
+              (from-string "125000000000000000000000000"))))
+  (union (const98) ?b95)
+  (let ?b96 (Num (bigrat (from-string "3") (from-string "1"))))
+  (union (const99) ?b96)
+  (let ?b97 (Pow ?sXr ?b96))
+  (union (const100) ?b97)
+  (let ?b98 (Mul ?b95 ?b97))
+  (union (const101) ?b98)
+  (let ?b99 (Add ?b94 ?b98))
+  (union (const102) ?b99)
+  (let ?r100 (Approx ?b99 ?r90))
+  (union (const103) ?r100)
+  (let ?r101 (Mulf64Ty ?r28 ?tYr))
+  (union (const104) ?r101)
+  (let ?r102 (Fmaf64Ty ?r28 ?r27 ?r38))
+  (union (const105) ?r102)
+  (let ?b103 (Num
+              (bigrat
+               (from-string "-304747143")
+               (from-string "100000000000000000000"))))
+  (union (const106) ?b103)
+  (let ?b104 (Mul ?b103 ?sXr))
+  (union (const107) ?b104)
+  (let ?b105 (Num
+              (bigrat
+               (from-string "4668270147")
+               (from-string "10000000000000000"))))
+  (union (const108) ?b105)
+  (let ?b106 (Add ?b104 ?b105))
+  (union (const109) ?b106)
+  (let ?b107 (Mul ?sYr ?b106))
+  (union (const110) ?b107)
+  (let ?b108 (Num (bigrat (from-string "-3") (from-string "1"))))
+  (union (const111) ?b108)
+  (let ?b109 (Mul ?b108 ?sYr))
+  (union (const112) ?b109)
+  (let ?b110 (Mul ?b109 ?sYr))
+  (union (const113) ?b110)
+  (let ?b111 (Mul ?sXr ?sXr))
+  (union (const114) ?b111)
+  (let ?b112 (Add ?b110 ?b111))
+  (union (const115) ?b112)
+  (let ?b113 (Mul ?sXr ?b95))
+  (union (const116) ?b113)
+  (let ?b114 (Mul ?b112 ?b113))
+  (union (const117) ?b114)
+  (let ?b115 (Num
+              (bigrat
+               (from-string "4616990181")
+               (from-string "500000000000000000000"))))
+  (union (const118) ?b115)
+  (let ?b116 (Sub ?sXr ?sYr))
+  (union (const119) ?b116)
+  (let ?b117 (Add ?sXr ?sYr))
+  (union (const120) ?b117)
+  (let ?b118 (Mul ?b116 ?b117))
+  (union (const121) ?b118)
+  (let ?b119 (Mul ?b115 ?b118))
+  (union (const122) ?b119)
+  (let ?b120 (Add ?b114 ?b119))
+  (union (const123) ?b120)
+  (let ?b121 (Add ?b107 ?b120))
+  (union (const124) ?b121)
+  (let ?b122 (Mul ?b108 ?sXr))
+  (union (const125) ?b122)
+  (let ?b123 (Mul ?b122 ?sXr))
+  (union (const126) ?b123)
+  (let ?b124 (Mul ?sYr ?sYr))
+  (union (const127) ?b124)
+  (let ?b125 (Add ?b123 ?b124))
+  (union (const128) ?b125)
+  (let ?b126 (Mul ?b125 ?sYr))
+  (union (const129) ?b126)
+  (let ?b127 (Num
+              (bigrat
+               (from-string "881662847")
+               (from-string "200000000000000000000000000"))))
+  (union (const130) ?b127)
+  (let ?b128 (Mul ?b126 ?b127))
+  (union (const131) ?b128)
+  (let ?b129 (Num
+              (bigrat
+               (from-string "-4165541759")
+               (from-string "125000000000000000000000000000000"))))
+  (union (const132) ?b129)
+  (let ?b130 (Mul ?b129 ?b117))
+  (union (const133) ?b130)
+  (let ?b131 (Mul ?b116 ?sYr))
+  (union (const134) ?b131)
+  (let ?b132 (Mul ?b130 ?b131))
+  (union (const135) ?b132)
+  (let ?b133 (Mul ?sXr ?b91))
+  (union (const136) ?b133)
+  (let ?b134 (Mul ?b133 ?b111))
+  (union (const137) ?b134)
+  (let ?b135 (Add ?b132 ?b134))
+  (union (const138) ?b135)
+  (let ?b136 (Mul ?sXr ?b135))
+  (union (const139) ?b136)
+  (let ?b137 (Add ?b128 ?b136))
+  (union (const140) ?b137)
+  (let ?b138 (Add ?b121 ?b137))
+  (union (const141) ?b138)
+  (let ?r139 (Approx ?b138 ?r102))
+  (union (const142) ?r139)
+  (let ?b140 (Num
+              (bigrat
+               (from-string "149230739")
+               (from-string "1250000000000000"))))
+  (union (const143) ?b140)
+  (let ?b141 (Mul ?sXr ?b140))
+  (union (const144) ?b141)
+  (let ?b142 (Num
+              (bigrat
+               (from-string "2946529277")
+               (from-string "100000000000"))))
+  (union (const145) ?b142)
+  (let ?b143 (Add ?b141 ?b142))
+  (union (const146) ?b143)
+  (let ?b144 (Add ?b107 ?b143))
+  (union (const147) ?b144)
+  (let ?r145 (Approx ?b144 ?r87))
+  (union (const148) ?r145)
+  (let ?r146 (Addf64Ty ?r0 ?r102))
+  (union (const149) ?r146)
+  (let ?b147 (Mul ?b113 ?b112))
+  (union (const150) ?b147)
+  (let ?b148 (Mul ?sYr ?b127))
+  (union (const151) ?b148)
+  (let ?b149 (Mul ?b148 ?b125))
+  (union (const152) ?b149)
+  (let ?b150 (Mul ?sXr ?sYr))
+  (union (const153) ?b150)
+  (let ?b151 (Mul ?b117 ?b150))
+  (union (const154) ?b151)
+  (let ?b152 (Mul ?b116 ?b129))
+  (union (const155) ?b152)
+  (let ?b153 (Mul ?b151 ?b152))
+  (union (const156) ?b153)
+  (let ?b154 (Add ?b149 ?b153))
+  (union (const157) ?b154)
+  (let ?b155 (Add ?b147 ?b154))
+  (union (const158) ?b155)
+  (let ?b156 (Add ?b119 ?b155))
+  (union (const159) ?b156)
+  (let ?b157 (Add ?b144 ?b156))
+  (union (const160) ?b157)
+  (let ?r158 (Approx ?b157 ?r146))
+  (union (const161) ?r158)
+  (let ?b159 (Sub ?b111 ?b124))
+  (union (const162) ?b159)
+  (let ?b160 (Mul ?b115 ?b159))
+  (union (const163) ?b160)
+  (let ?b161 (Mul ?b96 ?b124))
+  (union (const164) ?b161)
+  (let ?b162 (Sub ?b111 ?b161))
+  (union (const165) ?b162)
+  (let ?b163 (Mul ?sXr ?b162))
+  (union (const166) ?b163)
+  (let ?b164 (Mul ?b95 ?b163))
+  (union (const167) ?b164)
+  (let ?b165 (Neg ?b127))
+  (union (const168) ?b165)
+  (let ?b166 (Mul ?b96 ?b111))
+  (union (const169) ?b166)
+  (let ?b167 (Sub ?b166 ?b124))
+  (union (const170) ?b167)
+  (let ?b168 (Mul ?sYr ?b167))
+  (union (const171) ?b168)
+  (let ?b169 (Mul ?b165 ?b168))
+  (union (const172) ?b169)
+  (let ?b170 (Num
+              (bigrat
+               (from-string "-4165541759")
+               (from-string "500000000000000000000000000000000"))))
+  (union (const173) ?b170)
+  (let ?b171 (Mul ?sYr ?b159))
+  (union (const174) ?b171)
+  (let ?b172 (Mul ?sXr ?b171))
+  (union (const175) ?b172)
+  (let ?b173 (Mul ?b170 ?b172))
+  (union (const176) ?b173)
+  (let ?b174 (Mul ?b92 ?b173))
+  (union (const177) ?b174)
+  (let ?b175 (Mul ?b111 ?b111))
+  (union (const178) ?b175)
+  (let ?b176 (Mul ?b124 ?b124))
+  (union (const179) ?b176)
+  (let ?b177 (Num (bigrat (from-string "-6") (from-string "1"))))
+  (union (const180) ?b177)
+  (let ?b178 (Mul ?b111 ?b124))
+  (union (const181) ?b178)
+  (let ?b179 (Mul ?b177 ?b178))
+  (union (const182) ?b179)
+  (let ?b180 (Add ?b176 ?b179))
+  (union (const183) ?b180)
+  (let ?b181 (Add ?b175 ?b180))
+  (union (const184) ?b181)
+  (let ?b182 (Mul ?b91 ?b181))
+  (union (const185) ?b182)
+  (let ?b183 (Add ?b174 ?b182))
+  (union (const186) ?b183)
+  (let ?b184 (Add ?b169 ?b183))
+  (union (const187) ?b184)
+  (let ?b185 (Add ?b164 ?b184))
+  (union (const188) ?b185)
+  (let ?b186 (Add ?b160 ?b185))
+  (union (const189) ?b186)
+  (let ?r187 (Approx ?b186 ?r41))
+  (union (const190) ?r187)
+  (let ?r188 (Mulf64Ty ?r36 ?r43))
+  (union (const191) ?r188)
+  (let ?r189 (Divf64Ty ?r31 ?tXr))
+  (union (const192) ?r189)
+  (let ?r190 (Fmaf64Ty ?r20 ?r189 ?r188))
+  (union (const193) ?r190)
+  (let ?r191 (Fmaf64Ty ?r32 ?r31 ?r190))
+  (union (const194) ?r191)
+  (let ?r192 (Divf64Ty ?r35 ?tXr))
+  (union (const195) ?r192)
+  (let ?r193 (Fmaf64Ty ?r22 ?r192 ?r191))
+  (union (const196) ?r193)
+  (let ?r194 (Fmaf64Ty ?r30 ?r27 ?r193))
+  (union (const197) ?r194)
+  (let ?r195 (Fmaf64Ty ?r25 ?tYr ?r194))
+  (union (const198) ?r195)
+  (let ?r196 (Addf64Ty ?r1 ?r195))
+  (union (const199) ?r196)
+  (let ?r197 (Mulf64Ty ?tXr ?r196))
+  (union (const200) ?r197)
+  (let ?b198 (Pow ?sYr ?b92))
+  (union (const201) ?b198)
+  (let ?b199 (Mul ?b91 ?b198))
+  (union (const202) ?b199)
+  (let ?b200 (Pow ?sYr ?b96))
+  (union (const203) ?b200)
+  (let ?b201 (Mul ?b127 ?b200))
+  (union (const204) ?b201)
+  (let ?b202 (Mul ?b105 ?sYr))
+  (union (const205) ?b202)
+  (let ?b203 (Mul ?b103 ?sYr))
+  (union (const206) ?b203)
+  (let ?b204 (Num
+              (bigrat
+               (from-string "-636292509")
+               (from-string "125000000000000000000000000"))))
+  (union (const207) ?b204)
+  (let ?b205 (Num (bigrat (from-string "2") (from-string "1"))))
+  (union (const208) ?b205)
+  (let ?b206 (Pow ?sYr ?b205))
+  (union (const209) ?b206)
+  (let ?b207 (Mul ?b204 ?b206))
+  (union (const210) ?b207)
+  (let ?b208 (Num
+              (bigrat
+               (from-string "4165541759")
+               (from-string "125000000000000000000000000000000"))))
+  (union (const211) ?b208)
+  (let ?b209 (Mul ?b208 ?b200))
+  (union (const212) ?b209)
+  (let ?b210 (Add ?b207 ?b209))
+  (union (const213) ?b210)
+  (let ?b211 (Add ?b203 ?b210))
+  (union (const214) ?b211)
+  (let ?b212 (Add ?b140 ?b211))
+  (union (const215) ?b212)
+  (let ?b213 (Mul ?sXr ?b212))
+  (union (const216) ?b213)
+  (let ?b214 (Add ?b202 ?b213))
+  (union (const217) ?b214)
+  (let ?b215 (Add ?b201 ?b214))
+  (union (const218) ?b215)
+  (let ?b216 (Add ?b199 ?b215))
+  (union (const219) ?b216)
+  (let ?r217 (Approx ?b216 ?r197))
+  (union (const220) ?r217)
+  (let ?b218 (Num (bigrat (from-string "-1") (from-string "1"))))
+  (union (const221) ?b218)
+  (let ?b219 (Mul ?b208 ?sYr))
+  (union (const222) ?b219)
+  (let ?b220 (Sub ?b219 ?b95))
+  (union (const223) ?b220)
+  (let ?b221 (Div ?b220 ?sXr))
+  (union (const224) ?b221)
+  (let ?b222 (Mul ?b218 ?b221))
+  (union (const225) ?b222)
+  (let ?b223 (Num
+              (bigrat
+               (from-string "3689471323")
+               (from-string "1000000000000000000000000000000000"))))
+  (union (const226) ?b223)
+  (let ?b224 (Sub ?b222 ?b223))
+  (union (const227) ?b224)
+  (let ?r225 (Approx ?b224 ?r22))
+  (union (const228) ?r225)
+  (let ?r226 (Addf64Ty ?r20 ?r78))
+  (union (const229) ?r226)
+  (let ?r227 (Mulf64Ty ?r31 ?r226))
+  (union (const230) ?r227)
+  (let ?b228 (Add ?b199 ?b201))
+  (union (const231) ?b228)
+  (let ?r229 (Approx ?b228 ?r227))
+  (union (const232) ?r229)
+  (let ?r230 (Addf64Ty ?r36 ?r101))
+  (union (const233) ?r230)
+  (let ?r231 (Mulf64Ty ?tYr ?r230))
+  (union (const234) ?r231)
+  (let ?b232 (Num
+              (bigrat
+               (from-string "-4616990181")
+               (from-string "500000000000000000000"))))
+  (union (const235) ?b232)
+  (let ?b233 (Mul ?b232 ?b206))
+  (union (const236) ?b233)
+  (let ?b234 (Add ?b201 ?b202))
+  (union (const237) ?b234)
+  (let ?b235 (Add ?b199 ?b234))
+  (union (const238) ?b235)
+  (let ?b236 (Add ?b233 ?b235))
+  (union (const239) ?b236)
+  (let ?r237 (Approx ?b236 ?r231))
+  (union (const240) ?r237)
+  (let ?r238 (Approx ?b186 ?r49))
+  (union (const241) ?r238)
+  (let ?r239 (Mulf64Ty ?r0 ?r45))
+  (union (const242) ?r239)
+  (let ?r240 (Fmaf64Ty ?r1 ?r44 ?r239))
+  (union (const243) ?r240)
+  (let ?r241 (Fmaf64Ty ?r25 ?tXr ?r240))
+  (union (const244) ?r241)
+  (let ?r242 (Addf64Ty ?r36 ?r241))
+  (union (const245) ?r242)
+  (let ?r243 (Mulf64Ty ?tYr ?r242))
+  (union (const246) ?r243)
+  (let ?r244 (Approx ?b144 ?r243))
+  (union (const247) ?r244)
+  (let ?r245 (Mulf64Ty ?r18 ?r58))
+  (union (const248) ?r245)
+  (let ?r246 (Mulf64Ty ?r18 ?r60))
+  (union (const249) ?r246)
+  (let ?r247 (Divf64Ty ?r51 ?r14))
+  (union (const250) ?r247)
+  (let ?r248 (Divf64Ty ?r39 ?r247))
+  (union (const251) ?r248)
+  (let ?r249 (Mulf64Ty ?tYr ?r66))
+  (union (const252) ?r249)
+  (let ?r250 (Mulf64Ty ?r32 ?r65))
+  (union (const253) ?r250)
+  (let ?r251 (Mulf64Ty ?r35 ?r22))
+  (union (const254) ?r251)
+  (let ?r252 (Fmaf64Ty ?r30 ?r15 ?r250))
+  (union (const255) ?r252)
+  (let ?r253 (Fmaf64Ty ?r25 ?tYr ?r252))
+  (union (const256) ?r253)
+  (let ?r254 (Fmaf64Ty ?r20 ?r65 ?r37))
+  (union (const257) ?r254)
+  (let ?r255 (Fmaf64Ty ?r67 ?r15 ?r50))
+  (union (const258) ?r255)
+  (let ?r256 (Fmaf64Ty ?r35 ?r22 ?r37))
+  (union (const259) ?r256)
+  (let ?r257 (Fmaf64Ty ?tYr ?r249 ?r256))
+  (union (const260) ?r257)
+  (let ?r258 (Fmaf64Ty ?r22 ?r35 ?r254))
+  (union (const261) ?r258)
+  (let ?r259 (Subf64Ty ?r255 ?r251))
+  (union (const262) ?r259)
+  (let ?r260 (Fmaf64Ty ?r28 ?r15 ?r258))
+  (union (const263) ?r260)
+  (let ?r261 (Subf64Ty ?r253 ?r83))
+  (union (const264) ?r261)
+  (let ?r262 (Mulf64Ty ?tXr ?r261))
+  (union (const265) ?r262)
+  (let ?r263 (Fmaf64Ty ?r36 ?tYr ?r262))
+  (union (const266) ?r263)
+  (let ?r264 (Fmaf64Ty ?r20 ?r65 ?r263))
+  (union (const267) ?r264)
+  (let ?r265 (Fmaf64Ty ?r22 ?r35 ?r264))
+  (union (const268) ?r265)
+  (let ?r266 (Fmaf64Ty ?r28 ?r15 ?r265))
+  (union (const269) ?r266)
+  (let ?b267 (Mul ?b140 ?sXr))
+  (union (const270) ?b267)
+  (let ?b268 (Add ?b107 ?b160))
+  (union (const271) ?b268)
+  (let ?b269 (Add ?b111 ?b110))
+  (union (const272) ?b269)
+  (let ?b270 (Mul ?sXr ?b269))
+  (union (const273) ?b270)
+  (let ?b271 (Mul ?b95 ?b270))
+  (union (const274) ?b271)
+  (let ?b272 (Num
+              (bigrat
+               (from-string "-881662847")
+               (from-string "200000000000000000000000000"))))
+  (union (const275) ?b272)
+  (let ?b273 (Mul ?b272 ?b168))
+  (union (const276) ?b273)
+  (let ?b274 (Mul ?b129 ?b172))
+  (union (const277) ?b274)
+  (let ?b275 (Mul ?sXr ?b97))
+  (union (const278) ?b275)
+  (let ?b276 (Mul ?sXr ?b177))
+  (union (const279) ?b276)
+  (let ?b277 (Mul ?b276 ?sXr))
+  (union (const280) ?b277)
+  (let ?b278 (Add ?b277 ?b124))
+  (union (const281) ?b278)
+  (let ?b279 (Mul ?b124 ?b278))
+  (union (const282) ?b279)
+  (let ?b280 (Add ?b275 ?b279))
+  (union (const283) ?b280)
+  (let ?b281 (Mul ?b91 ?b280))
+  (union (const284) ?b281)
+  (let ?b282 (Add ?b274 ?b281))
+  (union (const285) ?b282)
+  (let ?b283 (Add ?b273 ?b282))
+  (union (const286) ?b283)
+  (let ?b284 (Add ?b271 ?b283))
+  (union (const287) ?b284)
+  (let ?b285 (Add ?b268 ?b284))
+  (union (const288) ?b285)
+  (let ?b286 (Add ?b267 ?b285))
+  (union (const289) ?b286)
+  (let ?r287 (Approx ?b286 ?r266))
+  (union (const290) ?r287)
+  (let ?r288 (Fmaf64Ty ?r101 ?tYr ?r0))
+  (union (const291) ?r288)
+  (let ?r289 (Subf64Ty ?r260 ?r86))
+  (union (const292) ?r289)
+  (let ?r290 (Subf64Ty ?r288 ?r259))
+  (union (const293) ?r290)
+  (let ?b291 (Add ?b142 ?b286))
+  (union (const294) ?b291)
+  (let ?r292 (Approx ?b291 ?r289))
+  (union (const295) ?r292)
+  (let ?r293 (Mulf64Ty ?r34 ?r22))
+  (union (const296) ?r293)
+  (let ?r294 (Fmaf64Ty ?r13 ?r14 ?r3))
+  (union (const297) ?r294)
+  (let ?r295 (Fmaf64Ty ?tXr ?r1 ?r246))
+  (union (const298) ?r295)
+  (let ?r296 (Fmaf64Ty ?tXr ?r56 ?r295))
+  (union (const299) ?r296)
+  (let ?r297 (Fmaf64Ty ?r22 ?r34 ?r294))
+  (union (const300) ?r297)
+  (let ?r298 (Fmaf64Ty ?tXr ?r62 ?r297))
+  (union (const301) ?r298)
+  (let ?r299 (Addf64Ty ?r294 ?r293))
+  (union (const302) ?r299)
+  (let ?r300 (Fmaf64Ty ?tXr ?r62 ?r299))
+  (union (const303) ?r300)
+  (let ?r301 (Mulf64Ty ?r73 ?tYr))
+  (union (const304) ?r301)
+  (let ?r302 (Fmaf64Ty ?r14 ?r14 ?r301))
+  (union (const305) ?r302)
+  (let ?r303 (Fmaf64Ty ?r245 ?tXr ?r75))
+  (union (const306) ?r303)
+  (let ?r304 (Fmaf64Ty ?tYr ?r82 ?r303))
+  (union (const307) ?r304)
+  (let ?r305 (Addf64Ty ?r304 ?r79))
+  (union (const308) ?r305)
+  (let ?r306 (Addf64Ty ?r0 ?r287))
+  (union (const309) ?r306)
+  (let ?r307 (Addf64Ty ?r12 ?r238))
+  (union (const310) ?r307)
+  (let ?r308 (Addf64Ty ?r7 ?r307))
+  (union (const311) ?r308)
+  (let ?r309 (Addf64Ty ?r3 ?r308))
+  (union (const312) ?r309)
+  (let ?r310 (Addf64Ty ?r0 ?r309))
+  (union (const313) ?r310)
+  (let ?r311 (Addf64Ty ?r12 ?r187))
+  (union (const314) ?r311)
+  (let ?r312 (Addf64Ty ?r7 ?r311))
+  (union (const315) ?r312)
+  (let ?r313 (Addf64Ty ?r3 ?r312))
+  (union (const316) ?r313)
+  (let ?r314 (Addf64Ty ?r0 ?r313))
+  (union (const317) ?r314)
+  (let ?r315 (Fmaf64Ty ?r22 ?r302 ?r80))
+  (union (const318) ?r315)
+  (let ?r316 (Fmaf64Ty ?tYr ?r82 ?r315))
+  (union (const319) ?r316)
+  (let ?r317 (Addf64Ty ?r316 ?r85))
+  (union (const320) ?r317)
+  (let ?r318 (Approx ?b185 ?r100))
+  (union (const321) ?r318)
+  (let ?r319 (Addf64Ty ?r17 ?r318))
+  (union (const322) ?r319)
+  (let ?r320 (Addf64Ty ?r12 ?r319))
+  (union (const323) ?r320)
+  (let ?r321 (Addf64Ty ?r7 ?r320))
+  (union (const324) ?r321)
+  (let ?r322 (Addf64Ty ?r3 ?r321))
+  (union (const325) ?r322)
+  (let ?r323 (Addf64Ty ?r0 ?r322))
+  (union (const326) ?r323)
+  (let ?b324 (Num
+              (bigrat
+               (from-string "-4668270147")
+               (from-string "10000000000000000"))))
+  (union (const327) ?b324)
+  (let ?b325 (Neg ?b324))
+  (union (const328) ?b325)
+  (let ?b326 (Mul ?b325 ?sYr))
+  (union (const329) ?b326)
+  (let ?b327 (Num (bigrat (from-string "-2") (from-string "1"))))
+  (union (const330) ?b327)
+  (let ?b328 (Num
+              (bigrat
+               (from-string "304747143")
+               (from-string "200000000000000000000"))))
+  (union (const331) ?b328)
+  (let ?b329 (Mul ?b328 ?b150))
+  (union (const332) ?b329)
+  (let ?b330 (Mul ?b327 ?b329))
+  (union (const333) ?b330)
+  (let ?b331 (Add ?b330 ?b186))
+  (union (const334) ?b331)
+  (let ?b332 (Add ?b326 ?b331))
+  (union (const335) ?b332)
+  (let ?b333 (Add ?b267 ?b332))
+  (union (const336) ?b333)
+  (let ?b334 (Add ?b142 ?b333))
+  (union (const337) ?b334)
+  (let ?r335 (Approx ?b334 ?r290))
+  (union (const338) ?r335)
+  (let ?r336 (Addf64Ty ?r139 ?r77))
+  (union (const339) ?r336)
+  (let ?r337 (Addf64Ty ?r3 ?r336))
+  (union (const340) ?r337)
+  (let ?r338 (Addf64Ty ?r0 ?r337))
+  (union (const341) ?r338)
+  (let ?r339 (Fmaf64Ty ?r28 ?r27 ?r217))
+  (union (const342) ?r339)
+  (let ?r340 (Approx ?b333 ?r339))
+  (union (const343) ?r340)
+  (let ?r341 (Addf64Ty ?r0 ?r340))
+  (union (const344) ?r341)
+  (let ?r342 (Addf64Ty ?r305 ?r85))
+  (union (const345) ?r342)
+  (let ?r343 (Fmaf64Ty ?r22 ?r34 ?r296))
+  (union (const346) ?r343)
+  (let ?r344 (Approx ?b333 ?r343))
+  (union (const347) ?r344)
+  (let ?r345 (Addf64Ty ?r0 ?r344))
+  (union (const348) ?r345)
+  (let ?r346 (Addf64Ty ?r145 ?r81))
+  (union (const349) ?r346)
+  (let ?r347 (Addf64Ty ?r346 ?r75))
+  (union (const350) ?r347)
+  (let ?r348 (Addf64Ty ?r244 ?r81))
+  (union (const351) ?r348)
+  (let ?r349 (Addf64Ty ?r348 ?r75))
+  (union (const352) ?r349)
+  (let ?r350 (Addf64Ty ?r0 ?r237))
+  (union (const353) ?r350)
+  (let ?r351 (Approx ?b334 ?r350))
+  (union (const354) ?r351)
+  (let ?r352 (Approx ?b332 ?r237))
+  (union (const355) ?r352)
+  (let ?r353 (Addf64Ty ?r3 ?r352))
+  (union (const356) ?r353)
+  (let ?r354 (Addf64Ty ?r0 ?r353))
+  (union (const357) ?r354)
+  (let ?r355 (Mulf64Ty ?r34 ?r225))
+  (union (const358) ?r355)
+  (let ?r356 (Approx ?b185 ?r355))
+  (union (const359) ?r356)
+  (let ?r357 (Addf64Ty ?r17 ?r356))
+  (union (const360) ?r357)
+  (let ?r358 (Addf64Ty ?r12 ?r357))
+  (union (const361) ?r358)
+  (let ?r359 (Addf64Ty ?r7 ?r358))
+  (union (const362) ?r359)
+  (let ?r360 (Addf64Ty ?r3 ?r359))
+  (union (const363) ?r360)
+  (let ?r361 (Addf64Ty ?r0 ?r360))
+  (union (const364) ?r361)
+  (let ?r362 (Addf64Ty ?r158 ?r75))
+  (union (const365) ?r362)
+  (let ?r363 (Fmaf64Ty ?r28 ?r27 ?r229))
+  (union (const366) ?r363)
+  (let ?r364 (Approx ?b186 ?r363))
+  (union (const367) ?r364)
+  (let ?r365 (Addf64Ty ?r12 ?r364))
+  (union (const368) ?r365)
+  (let ?r366 (Addf64Ty ?r7 ?r365))
+  (union (const369) ?r366)
+  (let ?r367 (Addf64Ty ?r3 ?r366))
+  (union (const370) ?r367)
+  (let ?r368 (Addf64Ty ?r0 ?r367))
+  (union (const371) ?r368)
+  (let ?r369 (Fmaf64Ty ?r72 ?r15 ?r248))
+  (union (const372) ?r369)
+  (let ?r370 (Fmaf64Ty ?r22 ?r369 ?r80))
+  (union (const373) ?r370)
+  (let ?r371 (Fmaf64Ty ?tYr ?r82 ?r370))
+  (union (const374) ?r371)
+  (let ?r372 (Addf64Ty ?r371 ?r85))
+  (union (const375) ?r372)
+  (let ?r373 (Fmaf64Ty ?r28 ?r27 ?r257))
+  (union (const376) ?r373)
+  (let ?r374 (Addf64Ty ?r0 ?r373))
+  (union (const377) ?r374)
+  (let ?r375 (Approx ?b334 ?r374))
+  (union (const378) ?r375)
+  (let ?r376 (Approx ?b333 ?r298))
+  (union (const379) ?r376)
+  (let ?r377 (Addf64Ty ?r0 ?r376))
+  (union (const380) ?r377)
+  (let ?r378 (Approx ?b333 ?r300))
+  (union (const381) ?r378)
+  (let ?r379 (Addf64Ty ?r0 ?r378))
+  (union (const382) ?r379))
+ :ruleset
+ run-extract-commands)
+(run-schedule (repeat 1 run-extract-commands))
+(rule ((= e (Approx spec impl))) ((union (do-lift e) spec)) :ruleset lift)
+(rule
+ ((= e (Atan2f32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Atan2 sx sy)))
+ :ruleset
+ lift)
+(rule ((= e (Ef32Ty))) ((union (do-lift e) (E))) :ruleset lift)
+(rule
+ ((= e (Mulf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Mul sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Cbrtf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Cbrt sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Sinhf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Sinh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (NotTy x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Not sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Log10f32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Log10 sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Asinf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Asin sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Ltf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Lt sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Sqrtf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Sqrt sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fdimf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fdim sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Lgammaf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Lgamma sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Negf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Neg sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Log1pf64Ty x)) (= sx (do-lift x)))
+ ((union
+   (do-lift e)
+   (Log (Add (Num (bigrat (from-string "1") (from-string "1"))) sx))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fminf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fmin sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Rintf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Rint sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Subf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Sub sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Array2f64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Array sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Array3f64Ty x y z))
+  (= sx (do-lift x))
+  (= sy (do-lift y))
+  (= sz (do-lift z)))
+ ((union (do-lift e) (Array3 sx sy sz)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Cbrtf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Cbrt sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fmaxf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fmax sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fmodf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fmod sx sy)))
+ :ruleset
+ lift)
+(rule ((= e (Infinityf32Ty))) ((union (do-lift e) (Infinity))) :ruleset lift)
+(rule
+ ((= e (Log10f64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Log10 sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Cosf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Cos sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fmaxf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fmax sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Sinhf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Sinh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Truncf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Trunc sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Tanhf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Tanh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Subf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Sub sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fabsf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Fabs sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Sinf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Sin sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Tanf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Tan sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Ceilf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Ceil sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Powf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Pow sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Neqf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Neq sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fabsf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Fabs sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Erfcf64Ty x)) (= sx (do-lift x)))
+ ((union
+   (do-lift e)
+   (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Erf sx))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Atanf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Atan sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Array3f32Ty x y z))
+  (= sx (do-lift x))
+  (= sy (do-lift y))
+  (= sz (do-lift z)))
+ ((union (do-lift e) (Array3 sx sy sz)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fmodf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fmod sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Exp2f64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Exp2 sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Eqf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Eq sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Atanf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Atan sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Powf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Pow sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Coshf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Cosh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Logbf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Logb sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Acosf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Acos sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Reff32Ty arr idx)) (= sarr (do-lift arr)) (= sidx (do-lift idx)))
+ ((union (do-lift e) (Ref sarr sidx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Expf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Exp sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Refr3f64Ty arr idx)) (= sarr (do-lift arr)) (= sidx (do-lift idx)))
+ ((union (do-lift e) (Ref sarr sidx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Roundf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Round sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Erfcf32Ty x)) (= sx (do-lift x)))
+ ((union
+   (do-lift e)
+   (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Erf sx))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Rintf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Rint sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Arrayf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Array sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Acosf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Acos sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Asinf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Asin sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Coshf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Cosh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Log2f64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Log2 sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Remainderf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Remainder sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Tanhf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Tanh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Gtf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Gt sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Copysignf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Copysign sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Erff64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Erf sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Remainderf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Remainder sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Reff64Ty arr idx)) (= sarr (do-lift arr)) (= sidx (do-lift idx)))
+ ((union (do-lift e) (Ref sarr sidx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Neqf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Neq sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Truncf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Trunc sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fdimf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fdim sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (AndTy x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (And sx sy)))
+ :ruleset
+ lift)
+(rule ((= e (TrueTy))) ((union (do-lift e) (True))) :ruleset lift)
+(rule
+ ((= e (Fmaf64Ty x y z))
+  (= sx (do-lift x))
+  (= sy (do-lift y))
+  (= sz (do-lift z)))
+ ((union (do-lift e) (Add (Mul sx sy) sz)))
+ :ruleset
+ lift)
+(rule ((= e (FalseTy))) ((union (do-lift e) (False))) :ruleset lift)
+(rule
+ ((= e (Hypotf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Sqrt (Add (Mul sx sx) (Mul sy sy)))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Erff32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Erf sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Logf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Log sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Eqf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Eq sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Tanf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Tan sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Logf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Log sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Expm1f32Ty x)) (= sx (do-lift x)))
+ ((union
+   (do-lift e)
+   (Sub (Exp sx) (Num (bigrat (from-string "1") (from-string "1"))))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Exp2f32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Exp2 sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Atanhf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Atanh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Arrayf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Array sx sy)))
+ :ruleset
+ lift)
+(rule ((= e (Nanf64Ty))) ((union (do-lift e) (Nan))) :ruleset lift)
+(rule
+ ((= e (Fminf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Fmin sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Expf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Exp sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Log2f32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Log2 sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Lgammaf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Lgamma sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Ltef64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Lte sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Fmaf32Ty x y z))
+  (= sx (do-lift x))
+  (= sy (do-lift y))
+  (= sz (do-lift z)))
+ ((union (do-lift e) (Add (Mul sx sy) sz)))
+ :ruleset
+ lift)
+(rule
+ ((= e (OrTy x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Or sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Addf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Add sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Iff64Ty c t f))
+  (= sc (do-lift c))
+  (= st (do-lift t))
+  (= sf (do-lift f)))
+ ((union (do-lift e) (If sc st sf)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Tgammaf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Tgamma sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Sqrtf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Sqrt sx)))
+ :ruleset
+ lift)
+(rule ((= e (Nanf32Ty))) ((union (do-lift e) (Nan))) :ruleset lift)
+(rule ((= e (Pif32Ty))) ((union (do-lift e) (Pi))) :ruleset lift)
+(rule
+ ((= e (Logbf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Logb sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Gtef32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Gte sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Refr3f32Ty arr idx)) (= sarr (do-lift arr)) (= sidx (do-lift idx)))
+ ((union (do-lift e) (Ref sarr sidx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Gtf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Gt sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Divf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Div sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Acoshf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Acosh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Roundf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Round sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Atan2f64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Atan2 sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Floorf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Floor sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Hypotf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Sqrt (Add (Mul sx sx) (Mul sy sy)))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Asinhf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Asinh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Negf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Neg sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Refr2f64Ty arr idx)) (= sarr (do-lift arr)) (= sidx (do-lift idx)))
+ ((union (do-lift e) (Ref sarr sidx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Ceilf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Ceil sx)))
+ :ruleset
+ lift)
+(rule ((= e (Ef64Ty))) ((union (do-lift e) (E))) :ruleset lift)
+(rule
+ ((= e (Gtef64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Gte sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Iff32Ty c t f))
+  (= sc (do-lift c))
+  (= st (do-lift t))
+  (= sf (do-lift f)))
+ ((union (do-lift e) (If sc st sf)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Mulf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Mul sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Floorf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Floor sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Ltef32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Lte sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Divf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Div sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Tgammaf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Tgamma sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Log1pf32Ty x)) (= sx (do-lift x)))
+ ((union
+   (do-lift e)
+   (Log (Add (Num (bigrat (from-string "1") (from-string "1"))) sx))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Expm1f64Ty x)) (= sx (do-lift x)))
+ ((union
+   (do-lift e)
+   (Sub (Exp sx) (Num (bigrat (from-string "1") (from-string "1"))))))
+ :ruleset
+ lift)
+(rule
+ ((= e (Acoshf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Acosh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Ltf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Lt sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Atanhf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Atanh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Copysignf64Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Copysign sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Asinhf64Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Asinh sx)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Addf32Ty x y)) (= sx (do-lift x)) (= sy (do-lift y)))
+ ((union (do-lift e) (Add sx sy)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Sinf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Sin sx)))
+ :ruleset
+ lift)
+(rule ((= e (Pif64Ty))) ((union (do-lift e) (Pi))) :ruleset lift)
+(rule
+ ((= e (Cosf32Ty x)) (= sx (do-lift x)))
+ ((union (do-lift e) (Cos sx)))
+ :ruleset
+ lift)
+(rule ((= e (InfinityTy))) ((union (do-lift e) (Infinity))) :ruleset lift)
+(rule
+ ((= e (Num_arr_3_sym_binary32 n)))
+ ((union (do-lift e) (Num n)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Num_arr_2_sym_binary32 n)))
+ ((union (do-lift e) (Num n)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Num_arr_2_arr_2_sym_binary64 n)))
+ ((union (do-lift e) (Num n)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Num_arr_3_sym_binary64 n)))
+ ((union (do-lift e) (Num n)))
+ :ruleset
+ lift)
+(rule
+ ((= e (Num_arr_2_sym_binary64 n)))
+ ((union (do-lift e) (Num n)))
+ :ruleset
+ lift)
+(rule ((= e (Num_sym_binary64 n))) ((union (do-lift e) (Num n))) :ruleset lift)
+(rule ((= e (Num_sym_binary32 n))) ((union (do-lift e) (Num n))) :ruleset lift)
+(run-schedule (saturate lift))
+(ruleset rewrite)
+(ruleset const-fold)
+(let $0 (bigrat (from-string "0") (from-string "1")))
+(let $1 (bigrat (from-string "1") (from-string "1")))
+(rewrite (Add (Num x) (Num y)) (Num (+ x y)) :ruleset const-fold)
+(rewrite (Sub (Num x) (Num y)) (Num (- x y)) :ruleset const-fold)
+(rewrite (Mul (Num x) (Num y)) (Num (* x y)) :ruleset const-fold)
+(rule
+ ((= e (Div (Num x) (Num y))) (!= $0 y))
+ ((union e (Num (/ x y))))
+ :ruleset
+ const-fold)
+(rewrite (Neg (Num x)) (Num (neg x)) :ruleset const-fold)
+(rule
+ ((= e (Pow (Num x) (Num y))) (= $0 x) (> y $0))
+ ((union e (Num $0)))
+ :ruleset
+ const-fold)
+(rule
+ ((= e (Pow (Num x) (Num y))) (= $0 y) (!= $0 x))
+ ((union e (Num $1)))
+ :ruleset
+ const-fold)
+(rule
+ ((= e (Pow (Num x) (Num y)))
+  (> y $0)
+  (!= $0 x)
+  (= y (round y))
+  (<= y (bigrat (from-string "16") (from-string "1"))))
+ ((union e (Num (pow x y))))
+ :ruleset
+ const-fold)
+(rule
+ ((= e (Sqrt (Num n))) (sqrt n))
+ ((union e (Num (sqrt n))))
+ :ruleset
+ const-fold)
+(rewrite (Log (Num $1)) (Num $0) :ruleset const-fold)
+(rewrite (Cbrt (Num $1)) (Num $1) :ruleset const-fold)
+(rewrite (Fabs (Num x)) (Num (abs x)) :ruleset const-fold)
+(rewrite (Floor (Num x)) (Num (floor x)) :ruleset const-fold)
+(rewrite (Ceil (Num x)) (Num (ceil x)) :ruleset const-fold)
+(rewrite (Round (Num x)) (Num (round x)) :ruleset const-fold)
+(rewrite
+ (Atanh (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acosh (Num (bigrat (from-string "1") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asinh (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Atan (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Neg (Div (Pi) (Num (bigrat (from-string "4") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Atan (Num (bigrat (from-string "1") (from-string "1"))))
+ (Div (Pi) (Num (bigrat (from-string "4") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Atan (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos
+  (Div
+   (Neg (Sqrt (Num (bigrat (from-string "3") (from-string "1")))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div
+  (Mul (Num (bigrat (from-string "5") (from-string "1"))) (Pi))
+  (Num (bigrat (from-string "6") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos
+  (Div
+   (Sqrt (Num (bigrat (from-string "3") (from-string "1"))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div (Pi) (Num (bigrat (from-string "6") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos
+  (Div
+   (Neg (Sqrt (Num (bigrat (from-string "2") (from-string "1")))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div
+  (Mul (Num (bigrat (from-string "3") (from-string "1"))) (Pi))
+  (Num (bigrat (from-string "4") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos
+  (Div
+   (Sqrt (Num (bigrat (from-string "2") (from-string "1"))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div (Pi) (Num (bigrat (from-string "4") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos (Num (bigrat (from-string "-1") (from-string "2"))))
+ (Div
+  (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Pi))
+  (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos (Num (bigrat (from-string "1") (from-string "2"))))
+ (Div (Pi) (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Pi)
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos (Num (bigrat (from-string "0") (from-string "1"))))
+ (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos (Num (bigrat (from-string "1") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin
+  (Div
+   (Neg (Sqrt (Num (bigrat (from-string "3") (from-string "1")))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Neg (Div (Pi) (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin
+  (Div
+   (Sqrt (Num (bigrat (from-string "3") (from-string "1"))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div (Pi) (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin
+  (Div
+   (Neg (Sqrt (Num (bigrat (from-string "2") (from-string "1")))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Neg (Div (Pi) (Num (bigrat (from-string "4") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin
+  (Div
+   (Sqrt (Num (bigrat (from-string "2") (from-string "1"))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div (Pi) (Num (bigrat (from-string "4") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin (Num (bigrat (from-string "-1") (from-string "2"))))
+ (Neg (Div (Pi) (Num (bigrat (from-string "6") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin (Num (bigrat (from-string "1") (from-string "2"))))
+ (Div (Pi) (Num (bigrat (from-string "6") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Neg (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin (Num (bigrat (from-string "1") (from-string "1"))))
+ (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Erfc (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite (Neg (Erf x)) (Erf (Neg x)) :ruleset rewrite)
+(rewrite (Erf (Neg x)) (Neg (Erf x)) :ruleset rewrite)
+(rewrite
+ (Erf (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Acosh x))
+ (Acosh
+  (Sub
+   (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul x x))
+   (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acosh
+  (Add
+   (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul x x))
+   (Num (bigrat (from-string "1") (from-string "1")))))
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Asinh (Fabs x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ (Cosh (Atanh x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  x
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ (Sinh (Atanh x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt (Add (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))
+ (Cosh (Asinh x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  x
+  (Sqrt (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ (Tanh (Asinh x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Log
+  (Add
+   x
+   (Sqrt (Sub (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))))
+ (Acosh x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Log
+   (Div
+    (Add (Num (bigrat (from-string "1") (from-string "1"))) x)
+    (Sub (Num (bigrat (from-string "1") (from-string "1"))) x)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ (Atanh x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Log
+  (Add
+   x
+   (Sqrt (Add (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))))
+ (Asinh x)
+ :ruleset
+ rewrite)
+(rewrite (Tanh (Atanh x)) x :ruleset rewrite)
+(rewrite
+ (Tanh (Acosh x))
+ (Div
+  (Sqrt (Sub (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))
+  x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh (Asinh x))
+ (Div
+  x
+  (Sqrt (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh (Atanh x))
+ (Div
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ :ruleset
+ rewrite)
+(rewrite (Cosh (Acosh x)) x :ruleset rewrite)
+(rewrite
+ (Cosh (Asinh x))
+ (Sqrt (Add (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Atanh x))
+ (Div
+  x
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Acosh x))
+ (Sqrt (Sub (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Sinh (Asinh x)) x :ruleset rewrite)
+(rewrite
+ (Atanh x)
+ (Div
+  (Log
+   (Div
+    (Add (Num (bigrat (from-string "1") (from-string "1"))) x)
+    (Sub (Num (bigrat (from-string "1") (from-string "1"))) x)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acosh x)
+ (Log
+  (Add
+   x
+   (Sqrt (Sub (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asinh x)
+ (Log
+  (Add
+   x
+   (Sqrt (Add (Mul x x) (Num (bigrat (from-string "1") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite (Neg (Sinh x)) (Sinh (Neg x)) :ruleset rewrite)
+(rewrite (Cosh x) (Cosh (Neg x)) :ruleset rewrite)
+(rewrite
+ (Num (bigrat (from-string "1") (from-string "1")))
+ (Cosh (Num (bigrat (from-string "0") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite (Cosh (Neg x)) (Cosh x) :ruleset rewrite)
+(rewrite
+ (Num (bigrat (from-string "0") (from-string "1")))
+ (Sinh (Num (bigrat (from-string "0") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite (Sinh (Neg x)) (Neg (Sinh x)) :ruleset rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sinh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cosh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Add (Sinh x) (Sinh y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Cosh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cosh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Add (Cosh x) (Cosh y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul (Cosh x) (Cosh y)) (Mul (Sinh x) (Sinh y)))
+ (Cosh (Add x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Add (Tanh x) (Tanh y))
+  (Add
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Mul (Tanh x) (Tanh y))))
+ (Tanh (Add x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul (Sinh x) (Cosh y)) (Mul (Cosh x) (Sinh y)))
+ (Sinh (Add x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul (Sinh x) (Sinh x)) (Mul (Cosh x) (Cosh x)))
+ (Cosh (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul (Sinh x) (Cosh x)))
+ (Sinh (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt
+  (Div
+   (Add (Cosh x) (Num (bigrat (from-string "1") (from-string "1"))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ (Cosh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sinh x)
+  (Sqrt
+   (Mul
+    (Num (bigrat (from-string "2") (from-string "1")))
+    (Add (Cosh x) (Num (bigrat (from-string "1") (from-string "1")))))))
+ (Sinh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Tanh x))
+  (Add
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Mul (Tanh x) (Tanh x))))
+ (Tanh (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sub (Cosh x) (Num (bigrat (from-string "1") (from-string "1"))))
+  (Sinh x))
+ (Tanh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sinh x)
+  (Add (Cosh x) (Num (bigrat (from-string "1") (from-string "1")))))
+ (Tanh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Sinh x) (Cosh y)) (Mul (Cosh x) (Sinh y)))
+ (Sinh (Sub x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Cosh x) (Cosh y)) (Mul (Sinh x) (Sinh y)))
+ (Cosh (Sub x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Cosh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Sinh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Sub (Sinh x) (Sinh y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sinh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Sinh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Sub (Cosh x) (Cosh y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Cosh x))
+ (Add (Exp x) (Exp (Neg x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Sinh x))
+ (Sub (Exp x) (Exp (Neg x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh (Add x y))
+ (Div
+  (Add (Tanh x) (Tanh y))
+  (Add
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Mul (Tanh x) (Tanh y))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Cosh x) (Cosh y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sinh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Sinh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Sinh x) (Sinh y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Cosh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Sinh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Cosh x) (Cosh y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Cosh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cosh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Sinh x) (Sinh y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sinh (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cosh (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div
+  (Sinh x)
+  (Add (Cosh x) (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ (Div
+  (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Tanh x))
+  (Add
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Mul (Tanh x) (Tanh x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div
+  (Sinh x)
+  (Sqrt
+   (Mul
+    (Num (bigrat (from-string "2") (from-string "1")))
+    (Add (Cosh x) (Num (bigrat (from-string "1") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul (Sinh x) (Cosh x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Sub x y))
+ (Sub (Mul (Sinh x) (Cosh y)) (Mul (Cosh x) (Sinh y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh (Add x y))
+ (Add (Mul (Sinh x) (Cosh y)) (Mul (Cosh x) (Sinh y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh (Div x (Num (bigrat (from-string "2") (from-string "1")))))
+ (Sqrt
+  (Div
+   (Add (Cosh x) (Num (bigrat (from-string "1") (from-string "1"))))
+   (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ (Add (Mul (Sinh x) (Sinh x)) (Mul (Cosh x) (Cosh x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh (Sub x y))
+ (Sub (Mul (Cosh x) (Cosh y)) (Mul (Sinh x) (Sinh y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh (Add x y))
+ (Add (Mul (Cosh x) (Cosh y)) (Mul (Sinh x) (Sinh y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Sub (Exp x) (Exp (Neg x))) (Add (Exp x) (Exp (Neg x))))
+ (Tanh x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Exp x) (Exp (Neg x)))
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Cosh x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Exp x) (Exp (Neg x)))
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Sinh x))
+ :ruleset
+ rewrite)
+(rewrite (Exp (Neg x)) (Sub (Cosh x) (Sinh x)) :ruleset rewrite)
+(rewrite (Exp x) (Add (Cosh x) (Sinh x)) :ruleset rewrite)
+(rewrite
+ (Div
+  (Add (Exp x) (Exp (Neg x)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ (Cosh x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sub (Exp x) (Exp (Neg x)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ (Sinh x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sub
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Exp (Mul (Num (bigrat (from-string "-2") (from-string "1"))) x)))
+  (Add
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Exp (Mul (Num (bigrat (from-string "-2") (from-string "1"))) x))))
+ (Tanh x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sub
+   (Exp (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+   (Num (bigrat (from-string "1") (from-string "1"))))
+  (Add
+   (Exp (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+   (Num (bigrat (from-string "1") (from-string "1")))))
+ (Tanh x)
+ :ruleset
+ rewrite)
+(rewrite (Sub (Cosh x) (Sinh x)) (Exp (Neg x)) :ruleset rewrite)
+(rewrite (Add (Cosh x) (Sinh x)) (Exp x) :ruleset rewrite)
+(rewrite
+ (Sub (Mul (Cosh x) (Cosh x)) (Mul (Sinh x) (Sinh x)))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh x)
+ (Div
+  (Sub
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Exp (Mul (Num (bigrat (from-string "-2") (from-string "1"))) x)))
+  (Add
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Exp (Mul (Num (bigrat (from-string "-2") (from-string "1"))) x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh x)
+ (Div
+  (Sub
+   (Exp (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+   (Num (bigrat (from-string "1") (from-string "1"))))
+  (Add
+   (Exp (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+   (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tanh x)
+ (Div (Sub (Exp x) (Exp (Neg x))) (Add (Exp x) (Exp (Neg x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cosh x)
+ (Div
+  (Add (Exp x) (Exp (Neg x)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sinh x)
+ (Div
+  (Sub (Exp x) (Exp (Neg x)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x)))
+ (Sin (Acos x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  x
+  (Sqrt (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ (Sin (Atan x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x)))
+ (Cos (Asin x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  x
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ (Tan (Asin x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x)))
+  x)
+ (Tan (Acos x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sqrt (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ (Cos (Atan x))
+ :ruleset
+ rewrite)
+(rewrite (Sub (Pi) (Acos x)) (Acos (Neg x)) :ruleset rewrite)
+(rewrite (Neg (Atan x)) (Atan (Neg x)) :ruleset rewrite)
+(rewrite (Neg (Asin x)) (Asin (Neg x)) :ruleset rewrite)
+(rewrite
+ (Sub (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))) (Acos x))
+ (Asin x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))) (Asin x))
+ (Acos x)
+ :ruleset
+ rewrite)
+(rewrite (Atan (Neg x)) (Neg (Atan x)) :ruleset rewrite)
+(rewrite (Acos (Neg x)) (Sub (Pi) (Acos x)) :ruleset rewrite)
+(rewrite (Asin (Neg x)) (Neg (Asin x)) :ruleset rewrite)
+(rewrite
+ (Acos x)
+ (Sub (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))) (Asin x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin x)
+ (Sub (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))) (Acos x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Atan x))
+ (Div
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sqrt (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Atan x))
+ (Div
+  x
+  (Sqrt (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tan (Acos x))
+ (Div
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x)))
+  x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Acos x))
+ (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tan (Asin x))
+ (Div
+  x
+  (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Asin x))
+ (Sqrt (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Add (Sin (Sub x y)) (Sin (Add x y)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ (Mul (Sin x) (Cos y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sub (Cos (Sub x y)) (Cos (Add x y)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ (Mul (Sin x) (Sin y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Add (Cos (Add x y)) (Cos (Sub x y)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ (Mul (Cos x) (Cos y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub
+  (Num (bigrat (from-string "1") (from-string "2")))
+  (Mul
+   (Num (bigrat (from-string "1") (from-string "2")))
+   (Cos (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))))
+ (Mul (Sin x) (Sin x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add
+  (Num (bigrat (from-string "1") (from-string "2")))
+  (Mul
+   (Num (bigrat (from-string "1") (from-string "2")))
+   (Cos (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))))
+ (Mul (Cos x) (Cos x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Atan2
+  (Add x y)
+  (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x y)))
+ (Add (Atan x) (Atan y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Cos (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cos (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Add (Cos x) (Cos y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sin (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cos (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Add (Sin x) (Sin y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Atan2
+  (Sub x y)
+  (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x y)))
+ (Sub (Atan x) (Atan y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sin (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cos (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Sub (Sin x) (Sin y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Num (bigrat (from-string "-2") (from-string "1")))
+  (Mul
+   (Sin (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Sin (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ (Sub (Cos x) (Cos y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Tan x))
+  (Sub
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Mul (Tan x) (Tan x))))
+ (Tan (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite (Div (Sin x) (Cos x)) (Tan x) :ruleset rewrite)
+(rewrite (Tan x) (Div (Sin x) (Cos x)) :ruleset rewrite)
+(rewrite
+ (Add (Atan x) (Atan y))
+ (Atan2
+  (Add x y)
+  (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul x y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Atan x) (Atan y))
+ (Atan2
+  (Sub x y)
+  (Add (Num (bigrat (from-string "1") (from-string "1"))) (Mul x y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Sin x) (Cos y))
+ (Div
+  (Add (Sin (Sub x y)) (Sin (Add x y)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Sin x) (Sin y))
+ (Div
+  (Sub (Cos (Sub x y)) (Cos (Add x y)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Cos x) (Cos y))
+ (Div
+  (Add (Cos (Add x y)) (Cos (Sub x y)))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Cos x) (Cos y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Cos (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cos (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Sin x) (Sin y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sin (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cos (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Cos x) (Cos y))
+ (Mul
+  (Num (bigrat (from-string "-2") (from-string "1")))
+  (Mul
+   (Sin (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Sin (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Sin x) (Sin y))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Mul
+   (Sin (Div (Sub x y) (Num (bigrat (from-string "2") (from-string "1")))))
+   (Cos (Div (Add x y) (Num (bigrat (from-string "2") (from-string "1")))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Cos x) (Cos x))
+ (Add
+  (Num (bigrat (from-string "1") (from-string "2")))
+  (Mul
+   (Num (bigrat (from-string "1") (from-string "2")))
+   (Cos (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Sin x) (Sin x))
+ (Sub
+  (Num (bigrat (from-string "1") (from-string "2")))
+  (Mul
+   (Num (bigrat (from-string "1") (from-string "2")))
+   (Cos (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Cos x) (Cos y)) (Mul (Sin x) (Sin y)))
+ (Cos (Add x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Add (Tan x) (Tan y))
+  (Sub
+   (Num (bigrat (from-string "1") (from-string "1")))
+   (Mul (Tan x) (Tan y))))
+ (Tan (Add x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul (Sin x) (Cos y)) (Mul (Cos x) (Sin y)))
+ (Sin (Add x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Sin x) (Cos y)) (Mul (Cos x) (Sin y)))
+ (Sin (Sub x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul (Cos x) (Cos y)) (Mul (Sin x) (Sin y)))
+ (Cos (Sub x y))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub
+  (Mul
+   (Num (bigrat (from-string "4") (from-string "1")))
+   (Pow (Cos x) (Num (bigrat (from-string "3") (from-string "1")))))
+  (Mul (Num (bigrat (from-string "3") (from-string "1"))) (Cos x)))
+ (Cos (Mul (Num (bigrat (from-string "3") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Cos x) (Cos x)) (Mul (Sin x) (Sin x)))
+ (Cos (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Mul (Num (bigrat (from-string "3") (from-string "1"))) x))
+ (Sub
+  (Mul
+   (Num (bigrat (from-string "4") (from-string "1")))
+   (Pow (Cos x) (Num (bigrat (from-string "3") (from-string "1")))))
+  (Mul (Num (bigrat (from-string "3") (from-string "1"))) (Cos x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ (Sub (Mul (Cos x) (Cos x)) (Mul (Sin x) (Sin x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub
+  (Mul (Num (bigrat (from-string "3") (from-string "1"))) (Sin x))
+  (Mul
+   (Num (bigrat (from-string "4") (from-string "1")))
+   (Pow (Sin x) (Num (bigrat (from-string "3") (from-string "1"))))))
+ (Sin (Mul (Num (bigrat (from-string "3") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul (Sin x) (Cos x)))
+ (Sin (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Mul (Num (bigrat (from-string "3") (from-string "1"))) x))
+ (Sub
+  (Mul (Num (bigrat (from-string "3") (from-string "1"))) (Sin x))
+  (Mul
+   (Num (bigrat (from-string "4") (from-string "1")))
+   (Pow (Sin x) (Num (bigrat (from-string "3") (from-string "1"))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Mul (Num (bigrat (from-string "2") (from-string "1"))) x))
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul (Sin x) (Cos x)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Sub x y))
+ (Add (Mul (Cos x) (Cos y)) (Mul (Sin x) (Sin y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Sub x y))
+ (Sub (Mul (Sin x) (Cos y)) (Mul (Cos x) (Sin y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Add x y))
+ (Sub (Mul (Cos x) (Cos y)) (Mul (Sin x) (Sin y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Add x y))
+ (Add (Mul (Sin x) (Cos y)) (Mul (Cos x) (Sin y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) (Tan x))
+ (Tan
+  (Add (Neg x) (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "-1") (from-string "1"))) (Tan x))
+ (Tan (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))))
+ :ruleset
+ rewrite)
+(rewrite (Neg (Cos x)) (Cos (Add x (Pi))) :ruleset rewrite)
+(rewrite (Neg (Sin x)) (Sin (Add x (Pi))) :ruleset rewrite)
+(rewrite
+ (Cos x)
+ (Sin (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Neg (Sin x))
+ (Cos (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))))
+ :ruleset
+ rewrite)
+(rewrite (Tan x) (Tan (Add x (Pi))) :ruleset rewrite)
+(rewrite
+ (Tan (Div a (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div (Sin a) (Add (Num (bigrat (from-string "1") (from-string "1"))) (Cos a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tan (Div (Neg a) (Num (bigrat (from-string "2") (from-string "1")))))
+ (Div
+  (Neg (Sin a))
+  (Add (Num (bigrat (from-string "1") (from-string "1"))) (Cos a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Cos a) (Cos a))
+ (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul (Sin a) (Sin a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Sub (Sin a) (Sin b)) (Add (Cos a) (Cos b)))
+ (Tan (Div (Sub a b) (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Add (Sin a) (Sin b)) (Add (Cos a) (Cos b)))
+ (Tan (Div (Add a b) (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Cos a))
+  (Neg (Sin a)))
+ (Tan (Div (Neg a) (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Cos a)) (Sin a))
+ (Tan (Div a (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Neg (Sin a))
+  (Add (Num (bigrat (from-string "1") (from-string "1"))) (Cos a)))
+ (Tan (Div (Neg a) (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Sin a) (Add (Num (bigrat (from-string "1") (from-string "1"))) (Cos a)))
+ (Tan (Div a (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Tan (Add x (Pi))) (Tan x) :ruleset rewrite)
+(rewrite
+ (Tan (Pi))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tan (Div (Pi) (Num (bigrat (from-string "3") (from-string "1")))))
+ (Sqrt (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tan (Div (Pi) (Num (bigrat (from-string "4") (from-string "1")))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Tan (Div (Pi) (Num (bigrat (from-string "6") (from-string "1")))))
+ (Div
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sqrt (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))))
+ (Neg (Sin x))
+ :ruleset
+ rewrite)
+(rewrite (Cos (Add x (Pi))) (Neg (Cos x)) :ruleset rewrite)
+(rewrite
+ (Cos (Pi))
+ (Num (bigrat (from-string "-1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Div (Pi) (Num (bigrat (from-string "3") (from-string "1")))))
+ (Num (bigrat (from-string "1") (from-string "2")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Div (Pi) (Num (bigrat (from-string "4") (from-string "1")))))
+ (Div
+  (Sqrt (Num (bigrat (from-string "2") (from-string "1"))))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Div (Pi) (Num (bigrat (from-string "6") (from-string "1")))))
+ (Div
+  (Sqrt (Num (bigrat (from-string "3") (from-string "1"))))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1"))))))
+ (Cos x)
+ :ruleset
+ rewrite)
+(rewrite (Sin (Add x (Pi))) (Neg (Sin x)) :ruleset rewrite)
+(rewrite
+ (Sin (Pi))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Div (Pi) (Num (bigrat (from-string "3") (from-string "1")))))
+ (Div
+  (Sqrt (Num (bigrat (from-string "3") (from-string "1"))))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Div (Pi) (Num (bigrat (from-string "4") (from-string "1")))))
+ (Div
+  (Sqrt (Num (bigrat (from-string "2") (from-string "1"))))
+  (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Div (Pi) (Num (bigrat (from-string "6") (from-string "1")))))
+ (Num (bigrat (from-string "1") (from-string "2")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Sin a) (Sin a)) (Num (bigrat (from-string "1") (from-string "1"))))
+ (Neg (Mul (Cos a) (Cos a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul (Cos a) (Cos a)) (Num (bigrat (from-string "1") (from-string "1"))))
+ (Neg (Mul (Sin a) (Sin a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add
+  (Mul (Sin a) (Sin a))
+  (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Neg (Mul (Cos a) (Cos a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add
+  (Mul (Cos a) (Cos a))
+  (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Neg (Mul (Sin a) (Sin a)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul (Sin a) (Sin a)))
+ (Mul (Cos a) (Cos a))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Mul (Cos a) (Cos a)))
+ (Mul (Sin a) (Sin a))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul (Cos a) (Cos a)) (Mul (Sin a) (Sin a)))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub
+  (Fabs
+   (Remainder
+    (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+    (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Pi))))
+  (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+ (Asin (Sin x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Fabs
+  (Remainder x (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Pi))))
+ (Acos (Cos x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Acos (Cos x))
+ (Fabs
+  (Remainder x (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Pi))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Asin (Sin x))
+ (Sub
+  (Fabs
+   (Remainder
+    (Add x (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+    (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Pi))))
+  (Div (Pi) (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Atan (Tan x)) (Remainder x (Pi)) :ruleset rewrite)
+(rewrite (Tan (Atan x)) x :ruleset rewrite)
+(rewrite (Cos (Acos x)) x :ruleset rewrite)
+(rewrite (Sin (Asin x)) x :ruleset rewrite)
+(rewrite (Neg (Tan x)) (Tan (Neg x)) :ruleset rewrite)
+(rewrite (Neg (Sin x)) (Sin (Neg x)) :ruleset rewrite)
+(rewrite (Cos x) (Cos (Fabs x)) :ruleset rewrite)
+(rewrite (Cos x) (Cos (Neg x)) :ruleset rewrite)
+(rewrite (Tan (Neg x)) (Neg (Tan x)) :ruleset rewrite)
+(rewrite (Cos (Fabs x)) (Cos x) :ruleset rewrite)
+(rewrite (Cos (Neg x)) (Cos x) :ruleset rewrite)
+(rewrite (Sin (Neg x)) (Neg (Sin x)) :ruleset rewrite)
+(rewrite
+ (Tan (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cos (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sin (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Neg (Log a))
+ (Log (Div (Num (bigrat (from-string "1") (from-string "1"))) a))
+ :ruleset
+ rewrite)
+(rewrite (Sub (Log a) (Log b)) (Log (Div a b)) :ruleset rewrite)
+(rewrite (Add (Log a) (Log b)) (Log (Mul a b)) :ruleset rewrite)
+(rewrite
+ (Log (Pow a b))
+ (Mul
+  b
+  (Sound-Log (Fabs a) (Num (bigrat (from-string "0") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Log (Div a b)) (Sub (Log (Fabs a)) (Log (Fabs b))) :ruleset rewrite)
+(rewrite (Log (Mul a b)) (Add (Log (Fabs a)) (Log (Fabs b))) :ruleset rewrite)
+(rewrite (Mul b (Log a)) (Log (Pow a b)) :ruleset rewrite)
+(rewrite
+ (Log (E))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Log (Div (Num (bigrat (from-string "1") (from-string "1"))) a))
+ (Neg (Log a))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Neg b))
+ (Sound-/
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sound-Pow a b (Num (bigrat (from-string "0") (from-string "1"))))
+  (Num (bigrat (from-string "0") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Add b (Num (bigrat (from-string "1") (from-string "1")))))
+ (Mul (Sound-Pow a b (Num (bigrat (from-string "1") (from-string "1")))) a)
+ :ruleset
+ rewrite)
+(rewrite (Div (Pow a b) (Pow a c)) (Pow a (Sub b c)) :ruleset rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) (Pow a b))
+ (Pow a (Neg b))
+ :ruleset
+ rewrite)
+(rewrite (Mul (Pow a b) (Pow a c)) (Pow a (Add b c)) :ruleset rewrite)
+(rewrite (Mul (Pow b a) (Pow c a)) (Pow (Mul b c) a) :ruleset rewrite)
+(rewrite (Pow (Exp a) b) (Exp (Mul a b)) :ruleset rewrite)
+(rewrite
+ (Mul (Pow a b) a)
+ (Pow a (Add b (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Exp (Mul (Log a) b)) (Pow a b) :ruleset rewrite)
+(rewrite
+ (Mul (Mul a a) a)
+ (Pow a (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cbrt a)
+ (Pow a (Num (bigrat (from-string "1") (from-string "3"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul a a)
+ (Pow a (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt a)
+ (Pow a (Num (bigrat (from-string "1") (from-string "2"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) a)
+ (Pow a (Num (bigrat (from-string "-1") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Num (bigrat (from-string "0") (from-string "1"))) a)
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "1") (from-string "3"))))
+ (Cbrt a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "3") (from-string "1"))))
+ (Mul (Mul a a) a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "2") (from-string "1"))))
+ (Mul a a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "1") (from-string "2"))))
+ (Sqrt a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Num (bigrat (from-string "1") (from-string "1"))) a)
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "1") (from-string "1"))))
+ a
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow a (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Exp a) (Exp a))
+ (Exp (Mul a (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt (Exp a))
+ (Exp (Div a (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Exp a) (Num (bigrat (from-string "3") (from-string "1"))))
+ (Exp (Mul a (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cbrt (Exp a))
+ (Exp (Div a (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Exp (Mul a (Num (bigrat (from-string "3") (from-string "1")))))
+ (Pow (Exp a) (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Exp (Mul a (Num (bigrat (from-string "2") (from-string "1")))))
+ (Mul (Exp a) (Exp a))
+ :ruleset
+ rewrite)
+(rewrite
+ (Exp (Div a (Num (bigrat (from-string "3") (from-string "1")))))
+ (Cbrt (Exp a))
+ :ruleset
+ rewrite)
+(rewrite
+ (Exp (Div a (Num (bigrat (from-string "2") (from-string "1")))))
+ (Sqrt (Exp a))
+ :ruleset
+ rewrite)
+(rewrite (Exp (Mul a b)) (Pow (Exp a) b) :ruleset rewrite)
+(rewrite (Div (Exp a) (Exp b)) (Exp (Sub a b)) :ruleset rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) (Exp a))
+ (Exp (Neg a))
+ :ruleset
+ rewrite)
+(rewrite (Mul (Exp a) (Exp b)) (Exp (Add a b)) :ruleset rewrite)
+(rewrite (Exp (Sub a b)) (Div (Exp a) (Exp b)) :ruleset rewrite)
+(rewrite
+ (Exp (Neg a))
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) (Exp a))
+ :ruleset
+ rewrite)
+(rewrite (Exp (Add a b)) (Mul (Exp a) (Exp b)) :ruleset rewrite)
+(rewrite (Fabs (Exp x)) (Exp x) :ruleset rewrite)
+(rewrite (Exp x) (Fabs (Exp x)) :ruleset rewrite)
+(rewrite
+ (E)
+ (Exp (Num (bigrat (from-string "1") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Num (bigrat (from-string "1") (from-string "1")))
+ (Exp (Num (bigrat (from-string "0") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Exp (Num (bigrat (from-string "1") (from-string "1"))))
+ (E)
+ :ruleset
+ rewrite)
+(rewrite
+ (Exp (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite (Log (Exp x)) x :ruleset rewrite)
+(rewrite (Exp (Log x)) x :ruleset rewrite)
+(rewrite (Fmax a b) (Fmax b a) :ruleset rewrite)
+(rewrite (Fmin a b) (Fmin b a) :ruleset rewrite)
+(rewrite
+ (Div (Fabs (Cbrt x)) (Cbrt x))
+ (Copysign (Num (bigrat (from-string "1") (from-string "1"))) x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Cbrt x) (Fabs (Cbrt x)))
+ (Copysign (Num (bigrat (from-string "1") (from-string "1"))) x)
+ :ruleset
+ rewrite)
+(rewrite (Fabs (Cbrt x)) (Cbrt (Fabs x)) :ruleset rewrite)
+(rewrite (Cbrt (Fabs x)) (Fabs (Cbrt x)) :ruleset rewrite)
+(rewrite (Neg (Cbrt x)) (Cbrt (Neg x)) :ruleset rewrite)
+(rewrite (Cbrt (Neg x)) (Neg (Cbrt x)) :ruleset rewrite)
+(rewrite
+ (Mul x (Mul x x))
+ (Pow x (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Cbrt (Pow x y))
+ (Pow x (Div y (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Cbrt x) y)
+ (Pow x (Div y (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Div (Cbrt x) (Cbrt y)) (Cbrt (Div x y)) :ruleset rewrite)
+(rewrite (Mul (Cbrt x) (Cbrt y)) (Cbrt (Mul x y)) :ruleset rewrite)
+(rewrite (Cbrt (Div x y)) (Div (Cbrt x) (Cbrt y)) :ruleset rewrite)
+(rewrite (Cbrt (Mul x y)) (Mul (Cbrt x) (Cbrt y)) :ruleset rewrite)
+(rewrite
+ (Div
+  (Pow x (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow y (Num (bigrat (from-string "3") (from-string "1")))))
+ (Pow (Div x y) (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Pow x (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow y (Num (bigrat (from-string "3") (from-string "1")))))
+ (Pow (Mul x y) (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow x (Num (bigrat (from-string "3") (from-string "1"))))
+ (Mul x (Mul x x))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Div x y) (Num (bigrat (from-string "3") (from-string "1"))))
+ (Div
+  (Pow x (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow y (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Mul x y) (Num (bigrat (from-string "3") (from-string "1"))))
+ (Mul
+  (Pow x (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow y (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Neg (Pow x (Num (bigrat (from-string "3") (from-string "1")))))
+ (Pow (Neg x) (Num (bigrat (from-string "3") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Neg x) (Num (bigrat (from-string "3") (from-string "1"))))
+ (Neg (Pow x (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Mul (Cbrt x) (Mul (Cbrt x) (Cbrt x))) x :ruleset rewrite)
+(rewrite (Mul (Mul (Cbrt x) (Cbrt x)) (Cbrt x)) x :ruleset rewrite)
+(rewrite
+ (Cbrt (Pow x (Num (bigrat (from-string "3") (from-string "1")))))
+ x
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Cbrt x) (Num (bigrat (from-string "3") (from-string "1"))))
+ x
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt (Div x y))
+ (Div (Sqrt (Fabs x)) (Sqrt (Fabs y)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sqrt (Mul x y))
+ (Mul (Sqrt (Fabs x)) (Sqrt (Fabs y)))
+ :ruleset
+ rewrite)
+(rewrite (Div (Sqrt x) (Sqrt y)) (Sqrt (Div x y)) :ruleset rewrite)
+(rewrite (Mul (Sqrt x) (Sqrt y)) (Sqrt (Mul x y)) :ruleset rewrite)
+(rewrite
+ (Pow (Sqrt x) y)
+ (Pow x (Div y (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Fabs (Copysign a b)) (Fabs a) :ruleset rewrite)
+(rewrite (Copysign (Fabs a) b) (Copysign a b) :ruleset rewrite)
+(rewrite (Copysign a (Fabs b)) (Fabs a) :ruleset rewrite)
+(rewrite (Copysign (Neg a) b) (Copysign a b) :ruleset rewrite)
+(rewrite (Neg (Copysign a b)) (Copysign a (Neg b)) :ruleset rewrite)
+(rewrite (Copysign a (Neg b)) (Neg (Copysign a b)) :ruleset rewrite)
+(rewrite (Div (Cbrt a) a) (Fabs (Div (Cbrt a) a)) :ruleset rewrite)
+(rewrite (Fabs (Div (Cbrt a) a)) (Div (Cbrt a) a) :ruleset rewrite)
+(rewrite
+ (Div x (Fabs x))
+ (Copysign (Num (bigrat (from-string "1") (from-string "1"))) x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Fabs x) x)
+ (Copysign (Num (bigrat (from-string "1") (from-string "1"))) x)
+ :ruleset
+ rewrite)
+(rewrite (Sqrt a) (Fabs (Sqrt a)) :ruleset rewrite)
+(rewrite (Fabs (Sqrt a)) (Sqrt a) :ruleset rewrite)
+(rewrite (Div (Fabs a) (Fabs b)) (Fabs (Div a b)) :ruleset rewrite)
+(rewrite (Mul (Fabs a) (Fabs b)) (Fabs (Mul a b)) :ruleset rewrite)
+(rewrite (Fabs x) (Fabs (Neg x)) :ruleset rewrite)
+(rewrite (Fabs (Div a b)) (Div (Fabs a) (Fabs b)) :ruleset rewrite)
+(rewrite (Fabs (Mul a b)) (Mul (Fabs a) (Fabs b)) :ruleset rewrite)
+(rewrite (Fabs (Mul x x)) (Mul x x) :ruleset rewrite)
+(rewrite (Fabs (Neg x)) (Fabs x) :ruleset rewrite)
+(rewrite
+ (Fabs (Add (Fabs a) (Fabs b)))
+ (Add (Fabs a) (Fabs b))
+ :ruleset
+ rewrite)
+(rewrite (Fabs (Sub a b)) (Fabs (Sub b a)) :ruleset rewrite)
+(rewrite (Fabs (Fabs x)) (Fabs x) :ruleset rewrite)
+(rewrite (Cbrt (Sqrt x)) (Sqrt (Cbrt x)) :ruleset rewrite)
+(rewrite (Sqrt (Cbrt x)) (Cbrt (Sqrt x)) :ruleset rewrite)
+(rewrite (Mul x x) (Mul (Neg x) (Neg x)) :ruleset rewrite)
+(rewrite (Mul x x) (Mul (Fabs x) (Fabs x)) :ruleset rewrite)
+(rewrite (Mul (Fabs x) (Fabs x)) (Mul x x) :ruleset rewrite)
+(rewrite (Mul (Neg x) (Neg x)) (Mul x x) :ruleset rewrite)
+(rewrite (Fabs x) (Sqrt (Mul x x)) :ruleset rewrite)
+(rewrite (Sqrt (Mul x x)) (Fabs x) :ruleset rewrite)
+(rewrite (Mul (Sqrt x) (Sqrt x)) x :ruleset rewrite)
+(rewrite (Div (Neg a) (Neg b)) (Div a b) :ruleset rewrite)
+(rewrite (Div a b) (Div (Neg a) (Neg b)) :ruleset rewrite)
+(rewrite (Mul (Div a b) (Div c d)) (Div (Mul a c) (Mul b d)) :ruleset rewrite)
+(rewrite
+ (Sub (Div a b) (Div c d))
+ (Div (Sub (Mul a d) (Mul b c)) (Mul b d))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Div a b) (Div c d))
+ (Div (Add (Mul a d) (Mul b c)) (Mul b d))
+ :ruleset
+ rewrite)
+(rewrite (Sub (Div a c) (Div b c)) (Div (Sub a b) c) :ruleset rewrite)
+(rewrite (Add (Div a c) (Div b c)) (Div (Add a b) c) :ruleset rewrite)
+(rewrite (Div (Add a b) c) (Add (Div a c) (Div b c)) :ruleset rewrite)
+(rewrite (Div (Mul a b) (Mul c d)) (Mul (Div a c) (Div b d)) :ruleset rewrite)
+(rewrite (Div (Sub a b) c) (Sub (Div a c) (Div b c)) :ruleset rewrite)
+(rewrite
+ (Sub (Cbrt a) (Cbrt b))
+ (Sound-/
+  (Sub a b)
+  (Add
+   (Mul (Cbrt a) (Cbrt a))
+   (Add (Mul (Cbrt b) (Cbrt b)) (Mul (Cbrt a) (Cbrt b))))
+  (Sub (Cbrt a) (Cbrt b)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Cbrt a) (Cbrt b))
+ (Sound-/
+  (Add a b)
+  (Add
+   (Mul (Cbrt a) (Cbrt a))
+   (Sub (Mul (Cbrt b) (Cbrt b)) (Mul (Cbrt a) (Cbrt b))))
+  (Add (Cbrt a) (Cbrt b)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Add (Mul a a) (Sub (Mul b b) (Mul a b))) (Add a b))
+ (Add
+  (Pow a (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow b (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Add (Mul a a) (Add (Mul b b) (Mul a b))) (Sub a b))
+ (Sub
+  (Pow a (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow b (Num (bigrat (from-string "3") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub
+  (Pow a (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow b (Num (bigrat (from-string "3") (from-string "1")))))
+ (Mul (Add (Mul a a) (Add (Mul b b) (Mul a b))) (Sub a b))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add
+  (Pow a (Num (bigrat (from-string "3") (from-string "1"))))
+  (Pow b (Num (bigrat (from-string "3") (from-string "1")))))
+ (Mul (Add (Mul a a) (Sub (Mul b b) (Mul a b))) (Add a b))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Sqrt a) (Sqrt b))
+ (Sound-/ (Sub a b) (Add (Sqrt a) (Sqrt b)) (Sub (Sqrt a) (Sqrt b)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Sqrt a) (Sqrt b))
+ (Sound-/ (Sub a b) (Sub (Sqrt a) (Sqrt b)) (Add (Sqrt a) (Sqrt b)))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Div a b) (Div c d))
+ (Div (Add (Mul a d) (Mul c b)) (Mul b d))
+ :ruleset
+ rewrite)
+(rewrite (Div (Sub (Mul c a) b) a) (Sub c (Div b a)) :ruleset rewrite)
+(rewrite (Sub c (Div b a)) (Div (Sub (Mul c a) b) a) :ruleset rewrite)
+(rewrite (Div (Add (Mul c a) b) a) (Add c (Div b a)) :ruleset rewrite)
+(rewrite (Add c (Div b a)) (Div (Add (Mul c a) b) a) :ruleset rewrite)
+(rewrite
+ (Mul (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Div b a)) a)
+ (Sub a b)
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Add (Num (bigrat (from-string "1") (from-string "1"))) (Div b a)) a)
+ (Add a b)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "1") (from-string "1"))) (Div b a))
+ (Div a b)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div a b)
+ (Sound-/
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Sound-/ b a (Num (bigrat (from-string "0") (from-string "1"))))
+  (Div a b))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul a (Div (Num (bigrat (from-string "1") (from-string "1"))) b))
+ (Div a b)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div a b)
+ (Mul a (Div (Num (bigrat (from-string "1") (from-string "1"))) b))
+ :ruleset
+ rewrite)
+(rewrite (Mul (Add a b) (Sub a b)) (Sub (Mul a a) (Mul b b)) :ruleset rewrite)
+(rewrite
+ (Mul
+  (Add a (Num (bigrat (from-string "1") (from-string "1"))))
+  (Sub a (Num (bigrat (from-string "1") (from-string "1")))))
+ (Add (Mul a a) (Num (bigrat (from-string "-1") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul
+  (Add a (Num (bigrat (from-string "1") (from-string "1"))))
+  (Sub a (Num (bigrat (from-string "1") (from-string "1")))))
+ (Sub (Mul a a) (Num (bigrat (from-string "1") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add
+  (Sub
+   (Pow a (Num (bigrat (from-string "2") (from-string "1"))))
+   (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul a b)))
+  (Pow b (Num (bigrat (from-string "2") (from-string "1")))))
+ (Pow (Sub a b) (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add
+  (Add
+   (Pow a (Num (bigrat (from-string "2") (from-string "1"))))
+   (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul a b)))
+  (Pow b (Num (bigrat (from-string "2") (from-string "1")))))
+ (Pow (Add a b) (Num (bigrat (from-string "2") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Sub a b) (Num (bigrat (from-string "2") (from-string "1"))))
+ (Add
+  (Sub
+   (Pow a (Num (bigrat (from-string "2") (from-string "1"))))
+   (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul a b)))
+  (Pow b (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Pow (Add a b) (Num (bigrat (from-string "2") (from-string "1"))))
+ (Add
+  (Add
+   (Pow a (Num (bigrat (from-string "2") (from-string "1"))))
+   (Mul (Num (bigrat (from-string "2") (from-string "1"))) (Mul a b)))
+  (Pow b (Num (bigrat (from-string "2") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Pow a b) (Pow a b))
+ (Pow a (Mul (Num (bigrat (from-string "2") (from-string "1"))) b))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul a a) (Num (bigrat (from-string "-1") (from-string "1"))))
+ (Mul
+  (Add a (Num (bigrat (from-string "1") (from-string "1"))))
+  (Sub a (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub (Mul a a) (Num (bigrat (from-string "1") (from-string "1"))))
+ (Mul
+  (Add a (Num (bigrat (from-string "1") (from-string "1"))))
+  (Sub a (Num (bigrat (from-string "1") (from-string "1")))))
+ :ruleset
+ rewrite)
+(rewrite (Sub (Mul a a) (Mul b b)) (Mul (Add a b) (Sub a b)) :ruleset rewrite)
+(rewrite (Mul (Mul a a) (Mul b b)) (Mul (Mul a b) (Mul a b)) :ruleset rewrite)
+(rewrite (Mul (Mul a b) (Mul a b)) (Mul (Mul a a) (Mul b b)) :ruleset rewrite)
+(rewrite (Sub a (Neg b)) (Add a b) :ruleset rewrite)
+(rewrite (Add a b) (Sub a (Neg b)) :ruleset rewrite)
+(rewrite (Sub a b) (Neg (Sub b a)) :ruleset rewrite)
+(rewrite (Neg (Sub b a)) (Sub a b) :ruleset rewrite)
+(rewrite (Add a (Neg b)) (Sub a b) :ruleset rewrite)
+(rewrite (Sub a b) (Add a (Neg b)) :ruleset rewrite)
+(rewrite (Sub a (Mul b c)) (Add a (Mul (Neg b) c)) :ruleset rewrite)
+(rewrite (Add a (Mul b c)) (Sub a (Mul (Neg b) c)) :ruleset rewrite)
+(rewrite (Add a (Mul (Neg b) c)) (Sub a (Mul b c)) :ruleset rewrite)
+(rewrite (Sub a (Mul (Neg b) c)) (Add a (Mul b c)) :ruleset rewrite)
+(rewrite (Neg (Div a b)) (Div a (Neg b)) :ruleset rewrite)
+(rewrite (Neg (Div a b)) (Div (Neg a) b) :ruleset rewrite)
+(rewrite (Div a (Neg b)) (Neg (Div a b)) :ruleset rewrite)
+(rewrite (Div (Neg a) b) (Neg (Div a b)) :ruleset rewrite)
+(rewrite (Add (Neg a) (Neg b)) (Neg (Add a b)) :ruleset rewrite)
+(rewrite (Neg (Add a b)) (Add (Neg a) (Neg b)) :ruleset rewrite)
+(rewrite (Mul a (Neg b)) (Neg (Mul a b)) :ruleset rewrite)
+(rewrite (Mul (Neg a) b) (Neg (Mul a b)) :ruleset rewrite)
+(rewrite (Neg (Mul a b)) (Mul a (Neg b)) :ruleset rewrite)
+(rewrite (Neg (Mul a b)) (Mul (Neg a) b) :ruleset rewrite)
+(rewrite
+ (Add a (Mul c a))
+ (Mul (Add c (Num (bigrat (from-string "1") (from-string "1")))) a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Mul b a) a)
+ (Mul (Add b (Num (bigrat (from-string "1") (from-string "1")))) a)
+ :ruleset
+ rewrite)
+(rewrite (Sub (Mul b a) (Mul c a)) (Mul a (Sub b c)) :ruleset rewrite)
+(rewrite (Add (Mul b a) (Mul c a)) (Mul a (Add b c)) :ruleset rewrite)
+(rewrite (Sub (Mul a b) (Mul a c)) (Mul a (Sub b c)) :ruleset rewrite)
+(rewrite (Add (Mul a b) (Mul a c)) (Mul a (Add b c)) :ruleset rewrite)
+(rewrite (Mul a (Add b c)) (Add (Mul b a) (Mul c a)) :ruleset rewrite)
+(rewrite (Mul a (Add b c)) (Add (Mul a b) (Mul a c)) :ruleset rewrite)
+(rewrite
+ (Num (bigrat (from-string "1") (from-string "1")))
+ (Mul
+  (Num (bigrat (from-string "2") (from-string "1")))
+  (Num (bigrat (from-string "1") (from-string "2"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) x)
+ (Add x x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Num (bigrat (from-string "2") (from-string "1")))
+ (Add
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Num (bigrat (from-string "1") (from-string "1"))))
+ :ruleset
+ rewrite)
+(rewrite
+ (Add x x)
+ (Mul (Num (bigrat (from-string "2") (from-string "1"))) x)
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "-1") (from-string "1"))) a)
+ (Neg a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Div a (Num (bigrat (from-string "1") (from-string "1"))))
+ a
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul a (Num (bigrat (from-string "1") (from-string "1"))))
+ a
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "1") (from-string "1"))) a)
+ a
+ :ruleset
+ rewrite)
+(rewrite (Neg (Neg a)) a :ruleset rewrite)
+(rewrite
+ (Sub (Num (bigrat (from-string "0") (from-string "1"))) a)
+ (Neg a)
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub a (Num (bigrat (from-string "0") (from-string "1"))))
+ a
+ :ruleset
+ rewrite)
+(rewrite
+ (Add a (Num (bigrat (from-string "0") (from-string "1"))))
+ a
+ :ruleset
+ rewrite)
+(rewrite
+ (Add (Num (bigrat (from-string "0") (from-string "1"))) a)
+ a
+ :ruleset
+ rewrite)
+(rewrite
+ (Div a a)
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul a (Num (bigrat (from-string "0") (from-string "1"))))
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Num (bigrat (from-string "0") (from-string "1"))) a)
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div (Num (bigrat (from-string "0") (from-string "1"))) a)
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Sub a a)
+ (Num (bigrat (from-string "0") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul (Div (Num (bigrat (from-string "1") (from-string "1"))) a) a)
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Mul a (Div (Num (bigrat (from-string "1") (from-string "1"))) a))
+ (Num (bigrat (from-string "1") (from-string "1")))
+ :ruleset
+ rewrite)
+(rewrite
+ (Div
+  (Num (bigrat (from-string "1") (from-string "1")))
+  (Div (Num (bigrat (from-string "1") (from-string "1"))) a))
+ a
+ :ruleset
+ rewrite)
+(rewrite (Div (Mul b c) a) (Mul b (Div c a)) :ruleset rewrite)
+(rewrite (Div (Div b c) a) (Div b (Mul c a)) :ruleset rewrite)
+(rewrite (Div a (Div b c)) (Mul (Div a b) c) :ruleset rewrite)
+(rewrite (Div a (Mul b c)) (Div (Div a b) c) :ruleset rewrite)
+(rewrite (Mul (Div a b) c) (Div (Mul a c) b) :ruleset rewrite)
+(rewrite (Mul a (Div b c)) (Div (Mul a b) c) :ruleset rewrite)
+(rewrite (Mul (Mul a b) c) (Mul a (Mul b c)) :ruleset rewrite)
+(rewrite (Mul a (Mul b c)) (Mul (Mul a b) c) :ruleset rewrite)
+(rewrite (Sub a (Sub b c)) (Add (Sub a b) c) :ruleset rewrite)
+(rewrite (Sub (Sub a b) c) (Sub a (Add b c)) :ruleset rewrite)
+(rewrite (Sub (Add a b) c) (Add a (Sub b c)) :ruleset rewrite)
+(rewrite (Sub a (Add b c)) (Sub (Sub a b) c) :ruleset rewrite)
+(rewrite (Add (Sub a b) c) (Sub a (Sub b c)) :ruleset rewrite)
+(rewrite (Add a (Sub b c)) (Sub (Add a b) c) :ruleset rewrite)
+(rewrite (Add (Add a b) c) (Add a (Add b c)) :ruleset rewrite)
+(rewrite (Add a (Add b c)) (Add (Add a b) c) :ruleset rewrite)
+(rewrite (Mul a b) (Mul b a) :ruleset rewrite)
+(rewrite (Add a b) (Add b a) :ruleset rewrite)
+(run-schedule
+ (let-scheduler bo (back-off))
+ (repeat
+  50
+  (seq
+   (run-with bo rewrite :until (<= 4000 (get-size!)))
+   (run-with bo const-fold :until (<= 4000 (get-size!)))
+   (run bad-merge-rule :until (bad-merge?)))))
+(rewrite (Sound-/ a b fallback) (Div a b) :ruleset unsound)
+(rewrite (Sound-Pow a b fallback) (Pow a b) :ruleset unsound)
+(rewrite (Sound-Log a fallback) (Log a) :ruleset unsound)
+(run-schedule (saturate unsound))
+(rule
+ ((= e (Atan2 x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Atan2f32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (E)))
+ ((union (do-lower e "sym_binary32") (Ef32Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Mul x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Mulf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Cbrt x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Cbrtf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sinh x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Sinhf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Not x)) (= tx (do-lower x "sym_bool")))
+ ((union (do-lower e "sym_bool") (NotTy tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log10 x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Log10f32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Asin x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Asinf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Lt x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_bool") (Ltf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sqrt x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Sqrtf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fdim x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Fdimf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Lgamma x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Lgammaf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Neg x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Negf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log (Add (Num (bigrat (from-string "1") (from-string "1"))) x)))
+  (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Log1pf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fmin x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Fminf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Rint x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Rintf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sub x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Subf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Array x y))
+  (= tx (do-lower x "arr_2_sym_binary64"))
+  (= ty (do-lower y "arr_2_sym_binary64")))
+ ((union (do-lower e "arr_2_arr_2_sym_binary64") (Array2f64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Array3 x y z))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64"))
+  (= tz (do-lower z "sym_binary64")))
+ ((union (do-lower e "arr_3_sym_binary64") (Array3f64Ty tx ty tz)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Cbrt x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Cbrtf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fmax x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Fmaxf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fmod x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Fmodf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Infinity)))
+ ((union (do-lower e "sym_binary32") (Infinityf32Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log10 x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Log10f64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Cos x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Cosf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fmax x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Fmaxf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sinh x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Sinhf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Trunc x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Truncf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Tanh x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Tanhf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sub x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Subf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fabs x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Fabsf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sin x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Sinf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Tan x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Tanf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ceil x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Ceilf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Pow x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Powf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Neq x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_bool") (Neqf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fabs x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Fabsf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Erf x)))
+  (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Erfcf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Atan x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Atanf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Array3 x y z))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32"))
+  (= tz (do-lower z "sym_binary32")))
+ ((union (do-lower e "arr_3_sym_binary32") (Array3f32Ty tx ty tz)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fmod x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Fmodf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Exp2 x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Exp2f64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Eq x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_bool") (Eqf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Atan x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Atanf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Pow x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Powf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Cosh x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Coshf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Logb x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Logbf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Acos x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Acosf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ref arr idx))
+  (= tarr (do-lower arr "arr_2_sym_binary32"))
+  (= tidx (do-lower idx "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Reff32Ty tarr tidx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Exp x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Expf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ref arr idx))
+  (= tarr (do-lower arr "arr_3_sym_binary64"))
+  (= tidx (do-lower idx "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Refr3f64Ty tarr tidx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Round x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Roundf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sub (Num (bigrat (from-string "1") (from-string "1"))) (Erf x)))
+  (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Erfcf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Rint x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Rintf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Array x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "arr_2_sym_binary32") (Arrayf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Acos x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Acosf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Asin x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Asinf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Cosh x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Coshf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log2 x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Log2f64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Remainder x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Remainderf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Tanh x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Tanhf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Gt x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_bool") (Gtf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Copysign x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Copysignf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Erf x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Erff64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Remainder x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Remainderf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ref arr idx))
+  (= tarr (do-lower arr "arr_2_sym_binary64"))
+  (= tidx (do-lower idx "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Reff64Ty tarr tidx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Neq x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_bool") (Neqf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Trunc x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Truncf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fdim x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Fdimf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (And x y))
+  (= tx (do-lower x "sym_bool"))
+  (= ty (do-lower y "sym_bool")))
+ ((union (do-lower e "sym_bool") (AndTy tx ty)))
+ :ruleset
+ lower)
+(rule ((= e (True))) ((union (do-lower e "sym_bool") (TrueTy))) :ruleset lower)
+(rule
+ ((= e (Add (Mul x y) z))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64"))
+  (= tz (do-lower z "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Fmaf64Ty tx ty tz)))
+ :ruleset
+ lower)
+(rule
+ ((= e (False)))
+ ((union (do-lower e "sym_bool") (FalseTy)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sqrt (Add (Mul x x) (Mul y y))))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Hypotf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Erf x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Erff32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Logf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Eq x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_bool") (Eqf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Tan x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Tanf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Logf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sub (Exp x) (Num (bigrat (from-string "1") (from-string "1")))))
+  (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Expm1f32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Exp2 x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Exp2f32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Atanh x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Atanhf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Array x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "arr_2_sym_binary64") (Arrayf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Nan)))
+ ((union (do-lower e "sym_binary64") (Nanf64Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Fmin x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Fminf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Exp x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Expf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log2 x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Log2f32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Lgamma x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Lgammaf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Lte x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_bool") (Ltef64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Add (Mul x y) z))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32"))
+  (= tz (do-lower z "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Fmaf32Ty tx ty tz)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Or x y)) (= tx (do-lower x "sym_bool")) (= ty (do-lower y "sym_bool")))
+ ((union (do-lower e "sym_bool") (OrTy tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Add x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Addf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (If c t f))
+  (= tc (do-lower c "sym_bool"))
+  (= tt (do-lower t "sym_binary64"))
+  (= tf (do-lower f "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Iff64Ty tc tt tf)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Tgamma x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Tgammaf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sqrt x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Sqrtf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Nan)))
+ ((union (do-lower e "sym_binary32") (Nanf32Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Pi)))
+ ((union (do-lower e "sym_binary32") (Pif32Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Logb x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Logbf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Gte x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_bool") (Gtef32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ref arr idx))
+  (= tarr (do-lower arr "arr_3_sym_binary32"))
+  (= tidx (do-lower idx "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Refr3f32Ty tarr tidx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Gt x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_bool") (Gtf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Div x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Divf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Acosh x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Acoshf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Round x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Roundf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Atan2 x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Atan2f64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Floor x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Floorf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sqrt (Add (Mul x x) (Mul y y))))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Hypotf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Asinh x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Asinhf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Neg x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Negf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ref arr idx))
+  (= tarr (do-lower arr "arr_2_arr_2_sym_binary64"))
+  (= tidx (do-lower idx "sym_binary64")))
+ ((union (do-lower e "arr_2_sym_binary64") (Refr2f64Ty tarr tidx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Ceil x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Ceilf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (E)))
+ ((union (do-lower e "sym_binary64") (Ef64Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Gte x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_bool") (Gtef64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (If c t f))
+  (= tc (do-lower c "sym_bool"))
+  (= tt (do-lower t "sym_binary32"))
+  (= tf (do-lower f "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Iff32Ty tc tt tf)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Mul x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Mulf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Floor x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Floorf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Lte x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_bool") (Ltef32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Div x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Divf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Tgamma x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Tgammaf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Log (Add (Num (bigrat (from-string "1") (from-string "1"))) x)))
+  (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Log1pf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sub (Exp x) (Num (bigrat (from-string "1") (from-string "1")))))
+  (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Expm1f64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Acosh x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Acoshf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Lt x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_bool") (Ltf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Atanh x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Atanhf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Copysign x y))
+  (= tx (do-lower x "sym_binary64"))
+  (= ty (do-lower y "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Copysignf64Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Asinh x)) (= tx (do-lower x "sym_binary64")))
+ ((union (do-lower e "sym_binary64") (Asinhf64Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Add x y))
+  (= tx (do-lower x "sym_binary32"))
+  (= ty (do-lower y "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Addf32Ty tx ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Sin x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Sinf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Pi)))
+ ((union (do-lower e "sym_binary64") (Pif64Ty)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Cos x)) (= tx (do-lower x "sym_binary32")))
+ ((union (do-lower e "sym_binary32") (Cosf32Ty tx)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Infinity)))
+ ((union (do-lower e "sym_binary64") (InfinityTy)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union (do-lower e "arr_3_sym_binary32") (Num_arr_3_sym_binary32 n)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union (do-lower e "arr_2_sym_binary32") (Num_arr_2_sym_binary32 n)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union
+   (do-lower e "arr_2_arr_2_sym_binary64")
+   (Num_arr_2_arr_2_sym_binary64 n)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union (do-lower e "arr_3_sym_binary64") (Num_arr_3_sym_binary64 n)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union (do-lower e "arr_2_sym_binary64") (Num_arr_2_sym_binary64 n)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union (do-lower e "sym_binary64") (Num_sym_binary64 n)))
+ :ruleset
+ lower)
+(rule
+ ((= e (Num n)))
+ ((union (do-lower e "sym_binary32") (Num_sym_binary32 n)))
+ :ruleset
+ lower)
+(run-schedule (saturate lower))
+(multi-extract
+ 1000000
+ (const5)
+ (const6)
+ (const3)
+ (const7)
+ (const8)
+ (const9)
+ (const4)
+ (const10)
+ (const11)
+ (const12)
+ (const13)
+ (const14)
+ (const15)
+ (const16)
+ (const17)
+ (const18)
+ (const19)
+ (const20)
+ (const21)
+ (const22)
+ (const23)
+ (const24)
+ (const25)
+ (const26)
+ (const27)
+ (const28)
+ (const29)
+ (const30)
+ (const31)
+ (const32)
+ (const33)
+ (const34)
+ (const35)
+ (const36)
+ (const37)
+ (const38)
+ (const39)
+ (const40)
+ (const41)
+ (const42)
+ (const43)
+ (const44)
+ (const45)
+ (const46)
+ (const47)
+ (const48)
+ (const49)
+ (const50)
+ (const51)
+ (const52)
+ (const53)
+ (const54)
+ (const55)
+ (const56)
+ (const57)
+ (const58)
+ (const59)
+ (const60)
+ (const61)
+ (const62)
+ (const63)
+ (const64)
+ (const65)
+ (const66)
+ (const67)
+ (const68)
+ (const69)
+ (const70)
+ (const71)
+ (const72)
+ (const73)
+ (const74)
+ (const75)
+ (const76)
+ (const77)
+ (const78)
+ (const79)
+ (const80)
+ (const81)
+ (const82)
+ (const83)
+ (const84)
+ (const85)
+ (const86)
+ (const87)
+ (const88)
+ (const89)
+ (const90)
+ (const91)
+ (const92)
+ (const93)
+ (const103)
+ (const104)
+ (const105)
+ (const142)
+ (const148)
+ (const149)
+ (const161)
+ (const190)
+ (const191)
+ (const192)
+ (const193)
+ (const194)
+ (const195)
+ (const196)
+ (const197)
+ (const198)
+ (const199)
+ (const200)
+ (const220)
+ (const228)
+ (const229)
+ (const230)
+ (const232)
+ (const233)
+ (const234)
+ (const240)
+ (const241)
+ (const242)
+ (const243)
+ (const244)
+ (const245)
+ (const246)
+ (const247)
+ (const248)
+ (const249)
+ (const250)
+ (const251)
+ (const252)
+ (const253)
+ (const254)
+ (const255)
+ (const256)
+ (const257)
+ (const258)
+ (const259)
+ (const260)
+ (const261)
+ (const262)
+ (const263)
+ (const264)
+ (const265)
+ (const266)
+ (const267)
+ (const268)
+ (const269)
+ (const290)
+ (const291)
+ (const292)
+ (const293)
+ (const295)
+ (const296)
+ (const297)
+ (const298)
+ (const299)
+ (const300)
+ (const301)
+ (const302)
+ (const303)
+ (const304)
+ (const305)
+ (const306)
+ (const307)
+ (const308)
+ (const309)
+ (const310)
+ (const311)
+ (const312)
+ (const313)
+ (const314)
+ (const315)
+ (const316)
+ (const317)
+ (const318)
+ (const319)
+ (const320)
+ (const321)
+ (const322)
+ (const323)
+ (const324)
+ (const325)
+ (const326)
+ (const338)
+ (const339)
+ (const340)
+ (const341)
+ (const342)
+ (const343)
+ (const344)
+ (const345)
+ (const346)
+ (const347)
+ (const348)
+ (const349)
+ (const350)
+ (const351)
+ (const352)
+ (const353)
+ (const354)
+ (const355)
+ (const356)
+ (const357)
+ (const358)
+ (const359)
+ (const360)
+ (const361)
+ (const362)
+ (const363)
+ (const364)
+ (const365)
+ (const366)
+ (const367)
+ (const368)
+ (const369)
+ (const370)
+ (const371)
+ (const372)
+ (const373)
+ (const374)
+ (const375)
+ (const376)
+ (const377)
+ (const378)
+ (const379)
+ (const380)
+ (const381)
+ (const382))
